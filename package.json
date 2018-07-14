@@ -1,0 +1,28 @@
+{
+  "name": "vizhub-ui",
+  "version": "1.0.0",
+  "description": "A platform for teaching and learning data visualization with D3.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datavis-tech/vizhub-ui.git"
+  },
+  "keywords": [
+    "data",
+    "visualization",
+    "D3",
+    "dataviz",
+    "IDE",
+    "editor",
+    "UI"
+  ],
+  "author": "Datavis Tech INC.",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/datavis-tech/vizhub-ui/issues"
+  },
+  "homepage": "https://github.com/datavis-tech/vizhub-ui#readme"
+}
