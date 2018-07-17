@@ -4,7 +4,11 @@
   "description": "A platform for teaching and learning data visualization with D3.js.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,11 @@
     "editor",
     "UI"
   ],
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
   "author": "Datavis Tech INC.",
   "license": "GPL-3.0",
   "bugs": {
