@@ -2,12 +2,11 @@
   "name": "vizhub-ui",
   "version": "1.0.0",
   "description": "A platform for teaching and learning data visualization with D3.js.",
-  "main": "index.js",
+  "main": "exports.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "react-scripts test --env=jsdom",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "repository": {
@@ -26,6 +25,7 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-measure": "^2.0.2",
     "react-scripts": "1.1.4"
   },
   "author": "Datavis Tech INC.",
