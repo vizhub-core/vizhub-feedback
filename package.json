@@ -2,7 +2,7 @@
   "name": "vizhub-ui",
   "version": "1.0.0",
   "description": "A platform for teaching and learning data visualization with D3.js.",
-  "main": "exports.js",
+  "main": "index.js",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
     "start": "react-scripts start",
