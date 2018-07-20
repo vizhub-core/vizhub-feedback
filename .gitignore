@@ -23,3 +23,6 @@ yarn-error.log*
 # things I don't trust
 yarn.lock
 package-lock.json
+
+# editor turd
+*.swp

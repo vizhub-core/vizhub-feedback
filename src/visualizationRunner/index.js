@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Measure from 'react-measure';
 import { RunnerIFrame } from './runnerIframe';
+import { computeScale } from './computeScale';
 
 export class VisualizationRunner extends Component {
   constructor() {
@@ -11,18 +12,13 @@ export class VisualizationRunner extends Component {
 
   render() {
     const { width, height, srcDoc } = this.props;
-    const scale = this.state.bounds.width / width;
+    const scale = computeScale(this.state.bounds.width, width);
 
     return (
       <Measure bounds onResize={this.onResize} >
         {({ measureRef }) =>
-          <div ref={measureRef} style={{height: `${height * scale}px`}} >
-            <RunnerIFrame
-              srcDoc={srcDoc}
-              width={width}
-              height={height}
-              scale={scale}
-            />
+          <div ref={measureRef} >
+            <RunnerIFrame {...{width, height, srcDoc, scale}} />
           </div>
         }
       </Measure>
