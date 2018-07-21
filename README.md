@@ -4,4 +4,4 @@ It's also where we keep our [public backlog](https://github.com/datavis-tech/viz
 
 If you discover bugs or have ideas for new features or tweaks, please [open an issue](https://github.com/datavis-tech/vizhub-ui/issues/new).
 
-For local development there is a testing app, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For local development there is a [testing app](./src/App.js), bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
