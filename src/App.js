@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { VisualizationRunner } from './exports';
+import { VisualizationRunner, CodeEditor } from './exports';
 
 const defaultIndexHTML =
 `<!DOCTYPE html>
@@ -37,6 +37,7 @@ class App extends Component {
           files={files}
         />
         <div>Hello</div>
+        <CodeEditor />
       </div>
     );
   }
