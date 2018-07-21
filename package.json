@@ -2,13 +2,11 @@
   "name": "vizhub-ui",
   "version": "1.0.0",
   "description": "A platform for teaching and learning data visualization with D3.js.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "rollup -c",
+    "postinstall": "npm run build",
+    "start": "react-scripts start"
   },
   "repository": {
     "type": "git",
@@ -24,8 +22,10 @@
     "UI"
   ],
   "dependencies": {
+    "magic-sandbox": "^1.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-measure": "^2.0.2",
     "react-scripts": "1.1.4"
   },
   "author": "Datavis Tech INC.",
@@ -33,5 +33,9 @@
   "bugs": {
     "url": "https://github.com/datavis-tech/vizhub-ui/issues"
   },
-  "homepage": "https://github.com/datavis-tech/vizhub-ui#readme"
+  "homepage": "https://github.com/datavis-tech/vizhub-ui#readme",
+  "devDependencies": {
+    "rollup": "^0.63.4",
+    "rollup-plugin-buble": "^0.19.2"
+  }
 }
