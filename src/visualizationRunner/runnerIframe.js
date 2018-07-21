@@ -1,7 +1,9 @@
 import React from 'react';
 export const RunnerIFrame = ({srcDoc, width, height, scale}) => (
   <iframe
-    {...{srcDoc, width, height}}
+    srcDoc={srcDoc}
+    width={width}
+    height={height}
     title='Visualization Runner'
     style={{
       transform: `scale(${scale})`,

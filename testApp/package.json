@@ -1,0 +1,27 @@
+{
+  "name": "vizhub-ui-test-app",
+  "version": "1.0.0",
+  "description": "A testing environment for vizhub-ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "react-scripts test --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datavis-tech/vizhub-ui.git"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
+  "author": "Datavis Tech INC.",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/datavis-tech/vizhub-ui/issues"
+  },
+  "homepage": "https://github.com/datavis-tech/vizhub-ui#readme"
+}
