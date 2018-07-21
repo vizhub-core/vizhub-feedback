@@ -22,7 +22,7 @@
     "UI"
   ],
   "dependencies": {
-    "magic-sandbox": "^1.1.0",
+    "magic-sandbox": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-measure": "^2.0.2",
