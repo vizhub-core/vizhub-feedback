@@ -28,8 +28,8 @@ export class VisualizationRunner extends Component {
             <RunnerIFrame
               width={width}
               height={height}
-              scale={computeScale(boundsWidth, width)}
-              srcDoc={computeSrcDoc(files)}
+              scale={scale}
+              srcDoc={srcDoc}
             />
           </div>
         }
