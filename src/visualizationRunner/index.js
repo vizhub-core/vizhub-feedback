@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Measure from 'react-measure';
 import { RunnerIFrame } from './runnerIframe';
 import { computeScale } from './computeScale';
+import { computeSrcDoc } from './computeSrcDoc';
 
 export class VisualizationRunner extends Component {
   constructor() {
@@ -11,14 +12,25 @@ export class VisualizationRunner extends Component {
   }
 
   render() {
-    const { width, height, srcDoc } = this.props;
-    const scale = computeScale(this.state.bounds.width, width);
+    const { width, height, files } = this.props;
+    const boundsWidth = this.state.bounds.width;
+
+    const scale = computeScale(boundsWidth, width);
+
+    // TODO optimize this heavyweight operation,
+    // only compute srcDoc if files changed.
+    const srcDoc = computeSrcDoc(files);
 
     return (
       <Measure bounds onResize={this.onResize} >
         {({ measureRef }) =>
-          <div ref={measureRef} >
-            <RunnerIFrame {...{width, height, srcDoc, scale}} />
+          <div ref={measureRef} style={{height: `${height * scale}px`}} >
+            <RunnerIFrame
+              width={width}
+              height={height}
+              scale={computeScale(boundsWidth, width)}
+              srcDoc={computeSrcDoc(files)}
+            />
           </div>
         }
       </Measure>
