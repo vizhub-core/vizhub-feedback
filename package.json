@@ -22,6 +22,7 @@
     "UI"
   ],
   "dependencies": {
+    "classnames": "^2.2.6",
     "codemirror": "^5.39.2",
     "magic-sandbox": "^1.2.0",
     "react": "^16.4.1",

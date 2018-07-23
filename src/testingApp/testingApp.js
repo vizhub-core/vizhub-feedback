@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
-import {
-  VisualizationRunner,
-  CodeEditor
-} from '../exports';
-import { files } from './files';
+import { IDE, actionCreators, selectors } from '../exports';
+import { connect } from 'react-redux';
+const { changeActiveFileText, save, setActiveFile } = actionCreators;
 
-export class TestingApp extends Component {
-  render() {
-    return (
-      <div>
-        <VisualizationRunner
-          width={960}
-          height={500}
-          files={files}
-        />
-        <div>Hello</div>
-        <CodeEditor />
-      </div>
-    );
+const { getFiles, getActiveFileName, getActiveFileText } = selectors;
+
+const mapStateToProps = state => {
+  return {
+    files: getFiles(state),
+    activeFileName: getActiveFileName(state),
+    activeFileText: getActiveFileText(state)
   }
-}
+};
+
+const mapDispatchToProps = dispatch => ({
+  onFileClick: fileName => dispatch(setActiveFile(fileName)),
+  onSave: () => dispatch(save()),
+  onTextChange: text => dispatch(changeActiveFileText(text))
+});
+
+export const TestingApp = connect(mapStateToProps, mapDispatchToProps)(IDE);
