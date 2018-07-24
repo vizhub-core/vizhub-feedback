@@ -4,8 +4,11 @@
   "description": "A platform for teaching and learning data visualization with D3.js.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c",
-    "postinstall": "npm run build",
+    "build-js": "rollup -c",
+    "build-css": "node-sass src/css/index.sass dist/styles.css",
+    "symlink-dist": "rm ./src/dist-symlink && ln -s ../dist/ ./src/dist-symlink",
+    "build": "rm -rf ./dist && npm run build-js && npm run build-css",
+    "postinstall": "npm run build && npm run symlink-dist",
     "start": "react-scripts start"
   },
   "repository": {
@@ -22,13 +25,17 @@
     "UI"
   ],
   "dependencies": {
+    "classnames": "^2.2.6",
     "codemirror": "^5.39.2",
     "magic-sandbox": "^1.2.0",
+    "node-sass": "^4.9.2",
     "react": "^16.4.1",
     "react-codemirror2": "^5.1.0",
     "react-dom": "^16.4.1",
     "react-measure": "^2.0.2",
-    "react-scripts": "1.1.4"
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
   },
   "author": "Datavis Tech INC.",
   "license": "GPL-3.0",

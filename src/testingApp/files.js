@@ -1,6 +1,3 @@
-import React, { Component } from 'react';
-import { VisualizationRunner, CodeEditor } from './exports';
-
 const defaultIndexHTML =
 `<!DOCTYPE html>
 <html>
@@ -22,25 +19,7 @@ const defaultStylesCSS =
   font-size: 5em;
 }`;
 
-const files = [
+export const files = [
   { name: 'index.html', text: defaultIndexHTML },
   { name: 'styles.css', text: defaultStylesCSS }
 ];
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <VisualizationRunner
-          width={960}
-          height={500}
-          files={files}
-        />
-        <div>Hello</div>
-        <CodeEditor />
-      </div>
-    );
-  }
-}
-
-export default App;

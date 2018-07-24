@@ -1,2 +1,3 @@
-export { VisualizationRunner } from './visualizationRunner/index';
-export { CodeEditor } from './visualizationEditor/index';
+export { IDE } from './ide/index';
+export { actionCreators, reducers, selectors } from './redux/index';
+export { FullPage } from './atoms/fullPage';

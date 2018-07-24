@@ -1,8 +1,9 @@
 import magicSandbox from 'magic-sandbox';
 
-const template = files => (
-  files.find(file => file.name === 'index.html').text
-);
+const template = files => {
+  const indexHtml = files.find(file => file.name === 'index.html');
+  return indexHtml ? indexHtml.text : '';
+};
 
 const transform = files => (
   files
