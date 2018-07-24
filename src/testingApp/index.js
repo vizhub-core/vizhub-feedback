@@ -5,7 +5,7 @@ import { files } from './files';
 import { actionCreators } from '../exports';
 
 import 'codemirror/lib/codemirror.css';
-import '../css/ubuntu.css';
+import '../dist-symlink/styles.css';
 
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
