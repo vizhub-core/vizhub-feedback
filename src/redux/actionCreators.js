@@ -1,6 +1,6 @@
 import {
   INIT_FILES,
-  CHANGE_ACTIVE_FILE_TEXT,
+  CHANGE_FILE_TEXT,
   SET_ACTIVE_FILE,
   SAVE
 } from './actionTypes';
@@ -10,8 +10,9 @@ export const initFiles = files => ({
   files
 });
 
-export const changeActiveFileText = text => ({
-  type: CHANGE_ACTIVE_FILE_TEXT,
+export const changeFileText = (fileName, text) => ({
+  type: CHANGE_FILE_TEXT,
+  fileName,
   text
 });
 

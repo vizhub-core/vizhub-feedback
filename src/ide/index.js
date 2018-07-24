@@ -9,8 +9,8 @@ export const IDE = props => {
     activeFileName,
     activeFileText,
     onFileClick,
+    onFileTextChange,
     onSave,
-    onTextChange,
     visualizationWidth,
     visualizationHeight
   } = props;
@@ -24,7 +24,7 @@ export const IDE = props => {
           activeFileText={activeFileText}
           onFileClick={onFileClick}
           onSave={onSave}
-          onTextChange={onTextChange}
+          onFileTextChange={onFileTextChange}
         />
       </IDEGrid.Left>
       <IDEGrid.Right>

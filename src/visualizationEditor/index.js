@@ -9,8 +9,8 @@ export const VisualizationEditor = props => {
     activeFileName,
     activeFileText,
     onFileClick,
-    onSave,
-    onTextChange
+    onFileTextChange,
+    onSave
   } = props;
 
   return (
@@ -26,7 +26,7 @@ export const VisualizationEditor = props => {
         <CodeEditor
           value={activeFileText}
           onSave={onSave}
-          onTextChange={onTextChange}
+          onTextChange={text => onFileTextChange(activeFileName, text)}
         />
       </EditorGrid.Center>
     </EditorGrid>
