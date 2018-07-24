@@ -1,7 +1,13 @@
-import { IDE, actionCreators, selectors } from '../exports';
+import React from 'react';
 import { connect } from 'react-redux';
-const { changeActiveFileText, save, setActiveFile } = actionCreators;
+import {
+  FullPage,
+  IDE,
+  actionCreators,
+  selectors
+} from '../exports';
 
+const { changeActiveFileText, save, setActiveFile } = actionCreators;
 const { getFiles, getActiveFileName, getActiveFileText } = selectors;
 
 const mapStateToProps = state => {
@@ -18,4 +24,11 @@ const mapDispatchToProps = dispatch => ({
   onTextChange: text => dispatch(changeActiveFileText(text))
 });
 
-export const TestingApp = connect(mapStateToProps, mapDispatchToProps)(IDE);
+export const TestingApp = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(props => (
+  <FullPage>
+    <IDE {...props} />
+  </FullPage>
+));
