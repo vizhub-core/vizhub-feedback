@@ -7,14 +7,28 @@ import {
   selectors
 } from '../exports';
 
-const { changeActiveFileText, save, setActiveFile } = actionCreators;
-const { getFiles, getActiveFileName, getActiveFileText } = selectors;
+const {
+  changeActiveFileText,
+  save,
+  setActiveFile
+} = actionCreators;
+
+const {
+  getFiles,
+  getActiveFileName,
+  getActiveFileText,
+  getVisualizationWidth,
+  getVisualizationHeight
+} = selectors;
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
     files: getFiles(state),
     activeFileName: getActiveFileName(state),
-    activeFileText: getActiveFileText(state)
+    activeFileText: getActiveFileText(state),
+    visualizationWidth: getVisualizationWidth(state),
+    visualizationHeight: getVisualizationHeight(state)
   }
 };
 
@@ -29,6 +43,15 @@ export const TestingApp = connect(
   mapDispatchToProps
 )(props => (
   <FullPage>
-    <IDE {...props} />
+    <IDE
+      files={props.files}
+      activeFileName={props.activeFileName}
+      activeFileText={props.activeFileText}
+      onFileClick={props.onFileClick}
+      onSave={props.onSave}
+      onTextChange={props.onTextChange}
+      visualizationWidth={props.visualizationWidth}
+      visualizationHeight={props.visualizationHeight}
+    />
   </FullPage>
 ));

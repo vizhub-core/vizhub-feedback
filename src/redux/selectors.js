@@ -1,12 +1,15 @@
-export const getFiles = state => state.files;
+export const getFiles = state => state.ide.files;
 
-export const getActiveFileName = state => state.activeFileName;
+export const getActiveFileName = state => state.ide.activeFileName;
 
 export const getActiveFileText = state => {
   const files = getFiles(state);
   const activeFileName = getActiveFileName(state);
-  const activeFile = files.find(({name}) => name === activeFileName);
-  return activeFile ? activeFile.text : '';
+  return files && activeFileName
+    ? files.find(({name}) => name === activeFileName).text
+    : '';
 };
-  
-  
+
+// TODO add these to state
+export const getVisualizationWidth = () => 960;
+export const getVisualizationHeight = () => 500;

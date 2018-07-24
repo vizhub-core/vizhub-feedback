@@ -7,6 +7,7 @@ export const IDE = props => {
   const {
     files,
     activeFileName,
+    activeFileText,
     onFileClick,
     onSave,
     onTextChange,
@@ -20,6 +21,7 @@ export const IDE = props => {
         <VisualizationEditor
           files={files}
           activeFileName={activeFileName}
+          activeFileText={activeFileText}
           onFileClick={onFileClick}
           onSave={onSave}
           onTextChange={onTextChange}

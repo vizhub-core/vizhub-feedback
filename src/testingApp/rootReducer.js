@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducers } from '../exports';
 
-const { files } = reducers;
+const { ide } = reducers;
 
-export const rootReducer = combineReducers({ files });
+export const rootReducer = combineReducers({ ide });
