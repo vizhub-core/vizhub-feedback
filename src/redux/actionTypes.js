@@ -6,3 +6,5 @@ export const SET_ACTIVE_FILE = editorPrefix('SET_ACTIVE_FILE');
 export const BUILD_FILES = editorPrefix('BUILD_FILES');
 export const EXECUTE_BUILD = editorPrefix('EXECUTE_BUILD');
 export const SAVE = editorPrefix('SAVE');
+export const SET_VISUALIZATION_WIDTH = editorPrefix('SET_VISUALIZATION_WIDTH');
+export const SET_VISUALIZATION_HEIGHT = editorPrefix('SET_VISUALIZATION_HEIGHT');

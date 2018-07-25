@@ -2,7 +2,9 @@ import { combineReducers } from 'redux';
 import {
   INIT_FILES,
   SET_ACTIVE_FILE,
-  CHANGE_FILE_TEXT 
+  CHANGE_FILE_TEXT,
+  SET_VISUALIZATION_WIDTH,
+  SET_VISUALIZATION_HEIGHT
 } from './actionTypes';
 
 const files = (state = [], action) => {
@@ -18,7 +20,7 @@ const files = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 const activeFileName = (state = null, action) => {
   switch (action.type) {
@@ -27,9 +29,29 @@ const activeFileName = (state = null, action) => {
     default:
       return state;
   }
-}
+};
+
+const visualizationWidth = (state = -1, action) => {
+  switch (action.type) {
+    case SET_VISUALIZATION_WIDTH:
+      return action.width;
+    default:
+      return state;
+  }
+};
+
+const visualizationHeight = (state = -1, action) => {
+  switch (action.type) {
+    case SET_VISUALIZATION_HEIGHT:
+      return action.height;
+    default:
+      return state;
+  }
+};
 
 export const ide = combineReducers({
   files,
-  activeFileName
+  activeFileName,
+  visualizationWidth,
+  visualizationHeight
 });
