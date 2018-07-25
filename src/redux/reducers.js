@@ -54,7 +54,6 @@ const generateRunId = () => Math.random().toString(36).substr(2);
 const runId = (state = generateRunId(), action) => {
   switch (action.type) {
     case RUN_FILES:
-      console.log('here');
       return generateRunId();
     default:
       return state;

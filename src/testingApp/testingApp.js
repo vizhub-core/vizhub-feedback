@@ -7,7 +7,8 @@ const {
   getActiveFileName,
   getActiveFileText,
   getVisualizationWidth,
-  getVisualizationHeight
+  getVisualizationHeight,
+  getRunId
 } = selectors;
 
 const {
@@ -21,7 +22,8 @@ const mapStateToProps = state => ({
   activeFileName: getActiveFileName(state),
   activeFileText: getActiveFileText(state),
   visualizationWidth: getVisualizationWidth(state),
-  visualizationHeight: getVisualizationHeight(state)
+  visualizationHeight: getVisualizationHeight(state),
+  runId: getRunId(state)
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -44,6 +46,7 @@ export const TestingApp = connect(
       onFileTextChange={props.onFileTextChange}
       visualizationWidth={props.visualizationWidth}
       visualizationHeight={props.visualizationHeight}
+      runId={props.runId}
     />
   </FullPage>
 ));

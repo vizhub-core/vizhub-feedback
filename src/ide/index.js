@@ -12,7 +12,8 @@ export const IDE = props => {
     onFileTextChange,
     onSave,
     visualizationWidth,
-    visualizationHeight
+    visualizationHeight,
+    runId
   } = props;
 
   return (
@@ -32,6 +33,7 @@ export const IDE = props => {
           files={files}
           width={visualizationWidth}
           height={visualizationHeight}
+          runId={runId}
         />
       </IDEGrid.Right>
     </IDEGrid>

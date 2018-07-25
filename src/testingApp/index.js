@@ -7,17 +7,9 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { rootReducer } from './rootReducer';
+import { epics } from '../exports';
 import 'codemirror/lib/codemirror.css';
 import '../dist-symlink/styles.css';
-
-import { CHANGE_FILE_TEXT, RUN_FILES } from '../redux/actionTypes';
-import { debounceTime, mapTo } from 'rxjs/operators';
-
-const runEpic = action$ =>
-  action$.ofType(CHANGE_FILE_TEXT).pipe(
-    debounceTime(700),
-    mapTo({ type: RUN_FILES })
-  );
 
 const epicMiddleware = createEpicMiddleware();
 
@@ -26,7 +18,7 @@ const store = createStore(
   applyMiddleware(epicMiddleware)
 );
 
-epicMiddleware.run(runEpic);
+epicMiddleware.run(epics.runEpic);
 
 const {
   initFiles,

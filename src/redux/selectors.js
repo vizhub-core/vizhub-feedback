@@ -12,3 +12,4 @@ export const getActiveFileText = state => {
 
 export const getVisualizationWidth = state => state.ide.visualizationWidth;
 export const getVisualizationHeight = state => state.ide.visualizationHeight;
+export const getRunId = state => state.ide.runId;
