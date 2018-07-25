@@ -9,9 +9,19 @@ import { rootReducer } from './rootReducer'
 import 'codemirror/lib/codemirror.css';
 import '../dist-symlink/styles.css';
 
-const { initFiles, setActiveFile } = actionCreators;
+const store = createStore(rootReducer);
 
-const store = createStore(rootReducer)
+const {
+  initFiles,
+  setActiveFile,
+  setVisualizationWidth,
+  setVisualizationHeight
+} = actionCreators;
+
+store.dispatch(initFiles(files));
+store.dispatch(setActiveFile('index.html'));
+store.dispatch(setVisualizationWidth(960));
+store.dispatch(setVisualizationHeight(500));    
 
 render(
   <Provider store={store}>
@@ -19,6 +29,3 @@ render(
   </Provider>,
   document.getElementById('root')
 );
-
-store.dispatch(initFiles(files));
-store.dispatch(setActiveFile('index.html'));

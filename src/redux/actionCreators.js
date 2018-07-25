@@ -2,7 +2,9 @@ import {
   INIT_FILES,
   CHANGE_FILE_TEXT,
   SET_ACTIVE_FILE,
-  SAVE
+  SAVE,
+  SET_VISUALIZATION_WIDTH,
+  SET_VISUALIZATION_HEIGHT
 } from './actionTypes';
 
 export const initFiles = files => ({
@@ -23,4 +25,14 @@ export const setActiveFile = fileName => ({
 
 export const save = () => ({
   type: SAVE
+});
+
+export const setVisualizationWidth = width => ({
+  type: SET_VISUALIZATION_WIDTH,
+  width
+});
+
+export const setVisualizationHeight = height => ({
+  type: SET_VISUALIZATION_HEIGHT,
+  height
 });
