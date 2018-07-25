@@ -1,7 +1,7 @@
 import React from 'react';
 import { IDEGrid } from './ideGrid';
-import { VisualizationEditor } from '../visualizationEditor';
-import { VisualizationRunner } from '../visualizationRunner';
+import { VisualizationEditor } from '../visualizationEditor/index';
+import { VisualizationRunner } from '../visualizationRunner/index';
 
 export const IDE = props => {
   const {

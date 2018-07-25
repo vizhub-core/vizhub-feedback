@@ -6,7 +6,9 @@ export default {
     'react',
     'react-measure',
     'magic-sandbox',
-    'react-codemirror2'
+    'react-codemirror2',
+    'redux',
+    'classnames'
   ],
   plugins: [
     buble()
