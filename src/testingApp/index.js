@@ -3,13 +3,22 @@ import { render } from 'react-dom';
 import { TestingApp } from './testingApp';
 import { files } from './files';
 import { actionCreators } from '../exports';
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { rootReducer } from './rootReducer'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { createEpicMiddleware } from 'redux-observable';
+import { rootReducer } from './rootReducer';
+import { epics } from '../exports';
 import 'codemirror/lib/codemirror.css';
 import '../dist-symlink/styles.css';
 
-const store = createStore(rootReducer);
+const epicMiddleware = createEpicMiddleware();
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(epicMiddleware)
+);
+
+epicMiddleware.run(epics.runEpic);
 
 const {
   initFiles,
