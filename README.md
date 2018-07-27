@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/68416/43137687-1603b57a-8f6a-11e8-9177-08c2369e858d.png)
+![image](https://user-images.githubusercontent.com/68416/43307440-e91fab98-919b-11e8-9bee-085627e9c811.png)
 
 This repository contains the core user interface components for [vizhub.com](https://vizhub.com).
 
