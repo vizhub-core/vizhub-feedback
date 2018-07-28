@@ -9,6 +9,7 @@ import {
   RUN_FILES,
   SAVE,
   SAVE_SUCCESS,
+  SAVE_ERROR,
   BUILD_FINISHED
 } from './actionTypes';
 
@@ -72,6 +73,8 @@ const saveStatus = (state = 'Saved', action) => {
       return 'Saving';
     case SAVE_SUCCESS:
       return 'Saved';
+    case SAVE_ERROR:
+      return action.error;
     case CHANGE_FILE_TEXT:
       return '';
     default:
