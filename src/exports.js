@@ -8,3 +8,4 @@ export {
   epics
 } from './redux/index';
 export { FullPage } from './atoms/fullPage';
+export { runDebounceTime, autoSaveDebounceTime } from './constants';

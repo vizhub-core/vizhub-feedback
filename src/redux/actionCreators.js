@@ -3,6 +3,7 @@ import {
   CHANGE_FILE_TEXT,
   SET_ACTIVE_FILE,
   SAVE,
+  SAVE_SUCCESS,
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
   RUN_FILES
@@ -40,4 +41,8 @@ export const setVisualizationHeight = height => ({
 
 export const runFiles = () => ({
   type: RUN_FILES
+});
+
+export const saveSuccess = () => ({
+  type: SAVE_SUCCESS
 });

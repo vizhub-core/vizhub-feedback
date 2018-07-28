@@ -5,9 +5,10 @@ import { files } from './files';
 import { actionCreators } from '../exports';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { createEpicMiddleware } from 'redux-observable';
+import { createEpicMiddleware, combineEpics } from 'redux-observable';
 import { rootReducer } from './rootReducer';
 import { epics } from '../exports';
+import { saveSimulationEpic } from './saveSimulationEpic';
 import 'codemirror/lib/codemirror.css';
 import '../dist-symlink/styles.css';
 
@@ -18,7 +19,11 @@ const store = createStore(
   applyMiddleware(epicMiddleware)
 );
 
-epicMiddleware.run(epics.runEpic);
+epicMiddleware.run(combineEpics(
+  epics.runEpic,
+  epics.autoSaveEpic,
+  saveSimulationEpic
+));
 
 const {
   initFiles,

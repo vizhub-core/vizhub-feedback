@@ -5,7 +5,9 @@ import {
   CHANGE_FILE_TEXT,
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
-  RUN_FILES
+  RUN_FILES,
+  SAVE,
+  SAVE_SUCCESS
 } from './actionTypes';
 
 const files = (state = [], action) => {
@@ -60,10 +62,24 @@ const runId = (state = generateRunId(), action) => {
   }
 }
 
+const saveStatus = (state = '', action) => {
+  switch (action.type) {
+    case SAVE:
+      return 'Saving...';
+    case SAVE_SUCCESS:
+      return 'Saved.';
+    case CHANGE_FILE_TEXT:
+      return '';
+    default:
+      return state;
+  }
+}
+
 export const ide = combineReducers({
   files,
   activeFileName,
   visualizationWidth,
   visualizationHeight,
-  runId
+  runId,
+  saveStatus
 });
