@@ -1,21 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { FullPage, IDE, actionCreators, selectors } from '../exports';
+import { FullPage, IDE, uiRedux } from '../exports';
 
 const {
-  getFiles,
-  getActiveFileName,
-  getActiveFileText,
-  getVisualizationWidth,
-  getVisualizationHeight,
-  getRunId,
-  getSaveStatus
-} = selectors;
-
-const {
-  changeFileText,
-  setActiveFile
-} = actionCreators;
+  selectors: {
+    getFiles,
+    getActiveFileName,
+    getActiveFileText,
+    getVisualizationWidth,
+    getVisualizationHeight,
+    getRunId,
+    getSaveStatus
+  },
+  actionCreators: {
+    changeFileText,
+    setActiveFile
+  }
+} = uiRedux;
 
 const mapStateToProps = state => ({
   files: getFiles(state),
