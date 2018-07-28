@@ -62,12 +62,12 @@ const runId = (state = generateRunId(), action) => {
   }
 }
 
-const saveStatus = (state = 'Saved.', action) => {
+const saveStatus = (state = 'Saved', action) => {
   switch (action.type) {
     case SAVE:
-      return 'Saving...';
+      return 'Saving';
     case SAVE_SUCCESS:
-      return 'Saved.';
+      return 'Saved';
     case CHANGE_FILE_TEXT:
       return '';
     default:
