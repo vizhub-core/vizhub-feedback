@@ -27,6 +27,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "codemirror": "^5.39.2",
+    "lodash": "^4.17.10",
     "magic-sandbox": "^1.2.0",
     "node-sass": "^4.9.2",
     "react": "^16.4.1",

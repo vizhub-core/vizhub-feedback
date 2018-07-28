@@ -1,3 +1,4 @@
+import unionBy from 'lodash/fp/unionBy';
 import { combineReducers } from 'redux';
 import {
   INIT_FILES,
@@ -7,7 +8,8 @@ import {
   SET_VISUALIZATION_HEIGHT,
   RUN_FILES,
   SAVE,
-  SAVE_SUCCESS
+  SAVE_SUCCESS,
+  BUILD_FINISHED
 } from './actionTypes';
 
 const files = (state = [], action) => {
@@ -20,6 +22,8 @@ const files = (state = [], action) => {
           ? Object.assign(file, { text: action.text })
           : file
       ));
+    case BUILD_FINISHED:
+      return unionBy(file => file.name)(action.files)(state);
     default:
       return state;
   }
