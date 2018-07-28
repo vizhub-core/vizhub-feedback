@@ -62,7 +62,7 @@ const runId = (state = generateRunId(), action) => {
   }
 }
 
-const saveStatus = (state = '', action) => {
+const saveStatus = (state = 'Saved.', action) => {
   switch (action.type) {
     case SAVE:
       return 'Saving...';
