@@ -10,10 +10,10 @@ export const IDE = props => {
     activeFileText,
     onFileClick,
     onFileTextChange,
-    onSave,
     visualizationWidth,
     visualizationHeight,
-    runId
+    runId,
+    saveStatus
   } = props;
 
   return (
@@ -24,9 +24,9 @@ export const IDE = props => {
           activeFileName={activeFileName}
           activeFileText={activeFileText}
           onFileClick={onFileClick}
-          onSave={onSave}
           onFileTextChange={onFileTextChange}
         />
+        <div className='save-status'>{saveStatus}</div>
       </IDEGrid.Left>
       <IDEGrid.Right>
         <VisualizationRunner

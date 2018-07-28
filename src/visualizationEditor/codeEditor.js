@@ -22,7 +22,7 @@ export class CodeEditor extends Component {
   }
 
   render() {
-    const { value, onSave, onTextChange } = this.props;
+    const { value, onTextChange } = this.props;
 
     if (!process.browser) {
       return null;
@@ -44,14 +44,6 @@ export class CodeEditor extends Component {
             mode: 'htmlmixed',
             theme: 'ubuntu',
             lineNumbers: true
-          }}
-          onKeyDown={(editor, event) => {
-
-            // Shift+Enter is the interaction for saving.
-            if (event.shiftKey && event.code === 'Enter') {
-              event.preventDefault();
-              onSave(editor.getValue());
-            }
           }}
           onBeforeChange={(editor, data, value) => {
             onTextChange(value)

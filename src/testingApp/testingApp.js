@@ -8,12 +8,12 @@ const {
   getActiveFileText,
   getVisualizationWidth,
   getVisualizationHeight,
-  getRunId
+  getRunId,
+  getSaveStatus
 } = selectors;
 
 const {
   changeFileText,
-  save,
   setActiveFile
 } = actionCreators;
 
@@ -23,12 +23,12 @@ const mapStateToProps = state => ({
   activeFileText: getActiveFileText(state),
   visualizationWidth: getVisualizationWidth(state),
   visualizationHeight: getVisualizationHeight(state),
-  runId: getRunId(state)
+  runId: getRunId(state),
+  saveStatus: getSaveStatus(state)
 });
 
 const mapDispatchToProps = dispatch => ({
   onFileClick: fileName => dispatch(setActiveFile(fileName)),
-  onSave: () => dispatch(save()),
   onFileTextChange: (fileName, text) => dispatch(changeFileText(fileName, text))
 });
 
@@ -37,16 +37,6 @@ export const TestingApp = connect(
   mapDispatchToProps
 )(props => (
   <FullPage>
-    <IDE
-      files={props.files}
-      activeFileName={props.activeFileName}
-      activeFileText={props.activeFileText}
-      onFileClick={props.onFileClick}
-      onSave={props.onSave}
-      onFileTextChange={props.onFileTextChange}
-      visualizationWidth={props.visualizationWidth}
-      visualizationHeight={props.visualizationHeight}
-      runId={props.runId}
-    />
+    <IDE {...props} />
   </FullPage>
 ));
