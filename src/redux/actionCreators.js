@@ -4,6 +4,7 @@ import {
   SET_ACTIVE_FILE,
   SAVE,
   SAVE_SUCCESS,
+  SAVE_ERROR,
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
   RUN_FILES
@@ -45,4 +46,9 @@ export const runFiles = () => ({
 
 export const saveSuccess = () => ({
   type: SAVE_SUCCESS
+});
+
+export const saveError = error => ({
+  type: SAVE_ERROR,
+  error
 });
