@@ -1,41 +1,42 @@
 import React from 'react';
-import { IDEGrid } from './ideGrid';
-import { VisualizationEditor } from '../visualizationEditor/index';
-import { VisualizationRunner } from '../visualizationRunner/index';
+import { connect } from 'react-redux';
+import { uiRedux } from '../exports';
+import { IDE } from './ide';
 
-export const IDE = props => {
-  const {
-    files,
-    activeFileName,
-    activeFileText,
-    onFileClick,
-    onFileTextChange,
-    visualizationWidth,
-    visualizationHeight,
-    runId,
-    saveStatus
-  } = props;
+const {
+  selectors: {
+    getFiles,
+    getActiveFileName,
+    getActiveFileText,
+    getVisualizationWidth,
+    getVisualizationHeight,
+    getRunId,
+    getSaveStatus
+  },
+  actionCreators: {
+    changeFileText,
+    setActiveFile
+  }
+} = uiRedux;
 
-  return (
-    <IDEGrid>
-      <IDEGrid.Left>
-        <VisualizationEditor
-          files={files}
-          activeFileName={activeFileName}
-          activeFileText={activeFileText}
-          onFileClick={onFileClick}
-          onFileTextChange={onFileTextChange}
-        />
-        <div className='save-status'>{saveStatus}</div>
-      </IDEGrid.Left>
-      <IDEGrid.Right>
-        <VisualizationRunner
-          files={files}
-          width={visualizationWidth}
-          height={visualizationHeight}
-          runId={runId}
-        />
-      </IDEGrid.Right>
-    </IDEGrid>
-  );
-};
+const mapStateToProps = state => ({
+  files: getFiles(state),
+  activeFileName: getActiveFileName(state),
+  activeFileText: getActiveFileText(state),
+  visualizationWidth: getVisualizationWidth(state),
+  visualizationHeight: getVisualizationHeight(state),
+  runId: getRunId(state),
+  saveStatus: getSaveStatus(state)
+});
+
+const mapDispatchToProps = dispatch => ({
+  onFileClick: fileName => dispatch(setActiveFile(fileName)),
+  onFileTextChange: (fileName, text) => dispatch(changeFileText(fileName, text))
+});
+
+export const IDEContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(props => (
+  <IDE { ...props }/>
+));

@@ -1,11 +1,7 @@
-export { IDE } from './ide/index';
+import * as uiRedux from './redux/index';
+
+export { uiRedux };
+export { IDEContainer } from './ide/index';
 export { VisualizationRunner } from './visualizationRunner/index';
-export {
-  actionTypes,
-  actionCreators,
-  reducers,
-  selectors,
-  epics
-} from './redux/index';
 export { FullPage } from './atoms/fullPage';
 export { runDebounceTime, autoSaveDebounceTime } from './constants';
