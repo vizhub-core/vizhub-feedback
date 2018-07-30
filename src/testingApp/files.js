@@ -16,7 +16,7 @@ const defaultIndexHTML =
 const defaultStylesCSS =
 `body {
   background-color: red;
-  margin 0px;
+  margin: 0px;
   font-size: 5em;
 }`;
 
