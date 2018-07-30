@@ -23,6 +23,7 @@ export const VisualizationEditor = props => {
       </EditorGrid.Left>
       <EditorGrid.Center>
         <CodeEditor
+          fileName={activeFileName}
           value={activeFileText}
           onTextChange={text => onFileTextChange(activeFileName, text)}
         />

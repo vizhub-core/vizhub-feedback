@@ -6,6 +6,7 @@ const defaultIndexHTML =
     <meta name="viewport" content="width=device-width">
     <title>Untitled</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
   </head>
   <body>
     Hello
@@ -15,11 +16,15 @@ const defaultIndexHTML =
 const defaultStylesCSS =
 `body {
   background-color: red;
-  margin 0px;
+  margin: 0px;
   font-size: 5em;
 }`;
 
+const defaultIndexJS =
+`console.log('Hello World!');`;
+
 export const files = [
   { name: 'index.html', text: defaultIndexHTML },
-  { name: 'styles.css', text: defaultStylesCSS }
+  { name: 'styles.css', text: defaultStylesCSS },
+  { name: 'index.js', text: defaultIndexJS }
 ];

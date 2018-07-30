@@ -5,6 +5,14 @@ import { Controlled as CodeMirror } from 'react-codemirror2';
 //   codemirror/lib/codemirror.css
 //   ../css/ubuntu.css
 
+const modes = {
+  '.html': 'htmlmixed',
+  '.css': 'css',
+  '.js': 'javascript'
+};
+const extension = fileName => fileName.substr(fileName.lastIndexOf('.'));
+const getMode = fileName => modes[extension(fileName)];
+
 export class CodeEditor extends Component {
 
   constructor(props) {
@@ -22,7 +30,7 @@ export class CodeEditor extends Component {
   }
 
   render() {
-    const { value, onTextChange } = this.props;
+    const { fileName, value, onTextChange } = this.props;
 
     if (!process.browser) {
       return null;
@@ -41,7 +49,7 @@ export class CodeEditor extends Component {
         <CodeMirror
           value={value}
           options={{
-            mode: 'htmlmixed',
+            mode: getMode(fileName),
             theme: 'ubuntu',
             lineNumbers: true
           }}
