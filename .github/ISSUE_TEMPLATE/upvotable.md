@@ -3,6 +3,9 @@ name: Upvotable
 about: Adds text to let viewers know how to upvote the issue.
 
 ---
+<!--- Please phrase the issue as a user story. --->
+
+As a ... I want ... so that ...
 
 <!--- Please leave the text below here, so folks know how to upvote the issue. Thanks! --->
 
