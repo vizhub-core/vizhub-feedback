@@ -1,6 +1,6 @@
 ---
-name: Upvotable
-about: Adds text to let viewers know how to upvote the issue.
+name: Upvotable Story
+about: A template issue for upvotable user stories. Please use this for feature requests.
 
 ---
 <!--- Please phrase the issue as a user story. --->
