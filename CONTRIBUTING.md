@@ -19,3 +19,21 @@ Our typical workflow:
 The testing app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 To run locally:
+
+Fork the project and clone it to your machine.
+
+```
+cd vizhub-ui
+npm install
+npm run start
+```
+
+This will start the development server, and open a browser to [http://localhost:3000](http://localhost:3000).
+
+Code changes will be watched, recompiled, and reloaded automatically.
+
+If you change the SASS files, you'll need to run the following for it to update:
+
+```
+npm run build-css
+```
