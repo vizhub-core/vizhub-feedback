@@ -6,6 +6,7 @@ It's also where we keep our [public backlog](https://github.com/datavis-tech/viz
 
  * If you want a certain feature, please give its corresponding GitHub issue a :thumbsup:
  * If you discover bugs or have ideas for new features, please [open an issue](https://github.com/datavis-tech/vizhub-ui/issues/new?template=upvotable.md).
+ * If you want to contribute code changes, see [contribution guidelines](CONTRIBUTING.md).
 
 To learn more, see also:
  * [Medium: Introducing VizHub](https://medium.com/@currankelleher/introducing-vizhub-75644cb8bba6).
