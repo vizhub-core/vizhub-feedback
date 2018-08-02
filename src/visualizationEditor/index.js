@@ -15,6 +15,11 @@ export const VisualizationEditor = props => {
     onFileDelete
   } = props;
 
+  const onNewFileLinkClick = event => {
+    event.preventDefault();
+    onNewFileClick();
+  };
+
   return (
     <EditorGrid>
       <EditorGrid.Left>
@@ -27,8 +32,8 @@ export const VisualizationEditor = props => {
         />
         <a
           className='action-link'
-          href='#'
-          onClick={onNewFileClick}
+          href='#new-file'
+          onClick={onNewFileLinkClick}
         >
           new file
         </a>

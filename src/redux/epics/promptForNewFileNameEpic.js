@@ -1,4 +1,3 @@
-import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CREATE_NEW_FILE } from '../actionTypes';
 import { newFileCreated } from '../actionCreators';

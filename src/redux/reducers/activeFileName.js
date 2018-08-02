@@ -8,10 +8,12 @@ export const activeFileName = (state = null, action) => {
       if (state === action.oldFileName) {
         return action.newFileName;
       }
+      break;
     case FILE_DELETED:
       if (state === action.fileName) {
         return 'index.html';
       }
+      break;
     default:
       return state;
   }
