@@ -19,10 +19,8 @@ export const files = (state = [], action) => {
     case BUILD_FINISHED:
       return unionBy(file => file.name)(action.files)(state);
     case NEW_FILE_CREATED:
-      return unionBy(file => file.name)([{
-        name: action.fileName,
-        text: ''
-      }])(state);
+      const newFile = { name: action.fileName, text: '' };
+      return unionBy(file => file.name)([newFile])(state);
     default:
       return state;
   }
