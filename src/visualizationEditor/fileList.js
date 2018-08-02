@@ -22,7 +22,7 @@ export const FileList = props => {
   };
 
   return (
-    <div tabindex='0' onKeyDown={onKeyDown}>
+    <div className='file-list' tabIndex='0' onKeyDown={onKeyDown}>
       {
         files.map(file => (
           <div
