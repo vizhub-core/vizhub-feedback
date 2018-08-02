@@ -6,13 +6,23 @@ export const FileList = props => {
     files,
     activeFileName,
     onFileClick,
-    onFileDoubleClick
+    onFileDoubleClick,
+    onFileDelete
   } = props;
 
   const isActive = file => file.name === activeFileName;
 
+  const BACKSPACE = 8;
+  const DELETE = 46;
+
+  const onKeyDown = event => {
+    if (event.keyCode === BACKSPACE || event.keyCode === DELETE) {
+      onFileDelete(activeFileName);
+    }
+  };
+
   return (
-    <React.Fragment>
+    <div tabindex='0' onKeyDown={onKeyDown}>
       {
         files.map(file => (
           <div
@@ -25,6 +35,6 @@ export const FileList = props => {
           </div>
         ))
       }
-    </React.Fragment>
+    </div>
   );
 };

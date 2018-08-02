@@ -12,6 +12,7 @@ export const VisualizationEditor = props => {
     onFileDoubleClick,
     onFileTextChange,
     onNewFileClick,
+    onFileDelete
   } = props;
 
   return (
@@ -22,6 +23,7 @@ export const VisualizationEditor = props => {
           activeFileName={activeFileName}
           onFileClick={onFileClick}
           onFileDoubleClick={onFileDoubleClick}
+          onFileDelete={onFileDelete}
         />
         <a
           className='action-link'

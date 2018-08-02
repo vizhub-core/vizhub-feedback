@@ -4,7 +4,8 @@ import {
   CHANGE_FILE_TEXT,
   BUILD_FINISHED,
   NEW_FILE_CREATED,
-  FILE_RENAMED
+  FILE_RENAMED,
+  FILE_DELETED
 } from '../actionTypes';
 
 export const files = (state = [], action) => {
@@ -28,6 +29,8 @@ export const files = (state = [], action) => {
           ? Object.assign(file, { name: action.newFileName })
           : file
       ));
+    case FILE_DELETED:
+      return state.filter(file => file.name !== action.fileName)
     default:
       return state;
   }

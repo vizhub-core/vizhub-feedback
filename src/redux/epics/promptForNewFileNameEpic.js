@@ -6,7 +6,7 @@ import { newFileCreated } from '../actionCreators';
 export const promptForNewFileNameEpic = action$ =>
   action$.ofType(CREATE_NEW_FILE).pipe(
     map(action => {
-      const fileName = prompt('Please enter a file name', 'myNewFile.js');
+      const fileName = window.prompt('Please enter a file name', 'myNewFile.js');
       return newFileCreated(fileName);
     })
   );

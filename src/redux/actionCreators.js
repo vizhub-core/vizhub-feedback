@@ -11,7 +11,9 @@ import {
   CREATE_NEW_FILE,
   NEW_FILE_CREATED,
   RENAME_FILE,
-  FILE_RENAMED
+  FILE_RENAMED,
+  DELETE_FILE,
+  FILE_DELETED
 } from './actionTypes';
 
 export const initFiles = files => ({
@@ -75,4 +77,14 @@ export const fileRenamed = (oldFileName, newFileName) => ({
   type: FILE_RENAMED,
   oldFileName,
   newFileName
+});
+
+export const deleteFile = fileName => ({
+  type: DELETE_FILE,
+  fileName
+});
+
+export const fileDeleted = fileName => ({
+  type: FILE_DELETED,
+  fileName
 });

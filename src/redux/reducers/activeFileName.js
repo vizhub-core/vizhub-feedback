@@ -1,4 +1,4 @@
-import { SET_ACTIVE_FILE, FILE_RENAMED } from '../actionTypes';
+import { SET_ACTIVE_FILE, FILE_RENAMED, FILE_DELETED } from '../actionTypes';
 
 export const activeFileName = (state = null, action) => {
   switch (action.type) {
@@ -7,6 +7,10 @@ export const activeFileName = (state = null, action) => {
     case FILE_RENAMED:
       if (state === action.oldFileName) {
         return action.newFileName;
+      }
+    case FILE_DELETED:
+      if (state === action.fileName) {
+        return 'index.html';
       }
     default:
       return state;
