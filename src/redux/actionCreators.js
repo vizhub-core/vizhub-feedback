@@ -7,7 +7,9 @@ import {
   SAVE_ERROR,
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
-  RUN_FILES
+  RUN_FILES,
+  CREATE_NEW_FILE,
+  NEW_FILE_CREATED
 } from './actionTypes';
 
 export const initFiles = files => ({
@@ -51,4 +53,13 @@ export const saveSuccess = () => ({
 export const saveError = error => ({
   type: SAVE_ERROR,
   error
+});
+
+export const createNewFile = () => ({
+  type: CREATE_NEW_FILE
+});
+
+export const newFileCreated = fileName => ({
+  type: NEW_FILE_CREATED,
+  fileName
 });

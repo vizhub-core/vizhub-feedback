@@ -9,7 +9,8 @@ export const VisualizationEditor = props => {
     activeFileName,
     activeFileText,
     onFileClick,
-    onFileTextChange
+    onFileTextChange,
+    onNewFileClick,
   } = props;
 
   return (
@@ -20,7 +21,13 @@ export const VisualizationEditor = props => {
           activeFileName={activeFileName}
           onFileClick={onFileClick}
         />
-        <a className='action-link' href='https://github.com/datavis-tech/vizhub-ui/issues/26'>new file</a>
+        <a
+          className='action-link'
+          href='#'
+          onClick={onNewFileClick}
+        >
+          new file
+        </a>
       </EditorGrid.Left>
       <EditorGrid.Center>
         <CodeEditor
