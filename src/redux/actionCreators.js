@@ -9,7 +9,9 @@ import {
   SET_VISUALIZATION_HEIGHT,
   RUN_FILES,
   CREATE_NEW_FILE,
-  NEW_FILE_CREATED
+  NEW_FILE_CREATED,
+  RENAME_FILE,
+  FILE_RENAMED
 } from './actionTypes';
 
 export const initFiles = files => ({
@@ -62,4 +64,15 @@ export const createNewFile = () => ({
 export const newFileCreated = fileName => ({
   type: NEW_FILE_CREATED,
   fileName
+});
+
+export const renameFile = fileName => ({
+  type: RENAME_FILE,
+  fileName
+});
+
+export const fileRenamed = (oldFileName, newFileName) => ({
+  type: FILE_RENAMED,
+  oldFileName,
+  newFileName
 });

@@ -3,7 +3,8 @@ import {
   INIT_FILES,
   CHANGE_FILE_TEXT,
   BUILD_FINISHED,
-  NEW_FILE_CREATED
+  NEW_FILE_CREATED,
+  FILE_RENAMED
 } from '../actionTypes';
 
 export const files = (state = [], action) => {
@@ -21,6 +22,12 @@ export const files = (state = [], action) => {
     case NEW_FILE_CREATED:
       const newFile = { name: action.fileName, text: '' };
       return unionBy(file => file.name)([newFile])(state);
+    case FILE_RENAMED:
+      return state.map(file => (
+        file.name === action.oldFileName
+          ? Object.assign(file, { name: action.newFileName })
+          : file
+      ));
     default:
       return state;
   }

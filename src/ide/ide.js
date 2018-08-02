@@ -9,6 +9,7 @@ export const IDE = props => {
     activeFileName,
     activeFileText,
     onFileClick,
+    onFileDoubleClick,
     onFileTextChange,
     onNewFileClick,
     visualizationWidth,
@@ -25,6 +26,7 @@ export const IDE = props => {
           activeFileName={activeFileName}
           activeFileText={activeFileText}
           onFileClick={onFileClick}
+          onFileDoubleClick={onFileDoubleClick}
           onFileTextChange={onFileTextChange}
           onNewFileClick={onNewFileClick}
         />

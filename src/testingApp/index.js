@@ -21,7 +21,8 @@ const {
   epics: {
     runEpic,
     autoSaveEpic,
-    promptForNewFileNameEpic
+    promptForNewFileNameEpic,
+    promptForRenameEpic
   }
 } = uiRedux;
 
@@ -36,7 +37,8 @@ epicMiddleware.run(combineEpics(
   runEpic,
   autoSaveEpic,
   saveSimulationEpic,
-  promptForNewFileNameEpic
+  promptForNewFileNameEpic,
+  promptForRenameEpic
 ));
 
 store.dispatch(initFiles(files));

@@ -12,3 +12,5 @@ export const SET_VISUALIZATION_HEIGHT = prefix('SET_VISUALIZATION_HEIGHT');
 export const BUILD_FINISHED = prefix('BUILD_FINISHED');
 export const CREATE_NEW_FILE = prefix('CREATE_NEW_FILE');
 export const NEW_FILE_CREATED = prefix('NEW_FILE_CREATED');
+export const RENAME_FILE = prefix('RENAME_FILE');
+export const FILE_RENAMED = prefix('FILE_RENAMED');

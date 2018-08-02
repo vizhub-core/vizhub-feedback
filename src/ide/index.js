@@ -16,7 +16,8 @@ const {
   actionCreators: {
     changeFileText,
     setActiveFile,
-    createNewFile
+    createNewFile,
+    renameFile
   }
 } = uiRedux;
 
@@ -33,7 +34,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onFileClick: fileName => dispatch(setActiveFile(fileName)),
   onFileTextChange: (fileName, text) => dispatch(changeFileText(fileName, text)),
-  onNewFileClick: () => dispatch(createNewFile())
+  onNewFileClick: () => dispatch(createNewFile()),
+  onFileDoubleClick: fileName => dispatch(renameFile(fileName))
 });
 
 export const IDEContainer = connect(
