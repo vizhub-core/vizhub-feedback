@@ -16,6 +16,8 @@ Our typical workflow:
 
 ## Development Environment Setup
 
+Check out the [video tutorial: Coding an IDE with React & Redux-Observable](https://www.youtube.com/watch?v=mrXCmhGmA5I&feature=youtu.be), which covers setup of the development environment and how to navigate the codebase.
+
 The testing app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 To run locally:
