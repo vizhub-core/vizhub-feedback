@@ -9,8 +9,16 @@ export const VisualizationEditor = props => {
     activeFileName,
     activeFileText,
     onFileClick,
-    onFileTextChange
+    onFileDoubleClick,
+    onFileTextChange,
+    onNewFileClick,
+    onFileDelete
   } = props;
+
+  const onNewFileLinkClick = event => {
+    event.preventDefault();
+    onNewFileClick();
+  };
 
   return (
     <EditorGrid>
@@ -19,8 +27,16 @@ export const VisualizationEditor = props => {
           files={files}
           activeFileName={activeFileName}
           onFileClick={onFileClick}
+          onFileDoubleClick={onFileDoubleClick}
+          onFileDelete={onFileDelete}
         />
-        <a className='action-link' href='https://github.com/datavis-tech/vizhub-ui/issues/26'>new file</a>
+        <a
+          className='action-link'
+          href='#new-file'
+          onClick={onNewFileLinkClick}
+        >
+          new file
+        </a>
       </EditorGrid.Left>
       <EditorGrid.Center>
         <CodeEditor
