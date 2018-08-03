@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { uiRedux } from '../exports';
+import { uiRedux } from '../redux/index';
 import { IDE } from './ide';
 
 const {
