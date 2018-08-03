@@ -8,7 +8,10 @@ export default {
     'magic-sandbox',
     'react-codemirror2',
     'redux',
-    'classnames'
+    'classnames',
+    'react-redux',
+    'lodash/fp/unionBy',
+    'rxjs/operators'
   ],
   plugins: [
     buble()

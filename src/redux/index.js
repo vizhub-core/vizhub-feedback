@@ -1,7 +1,13 @@
 import * as actionTypes from './actionTypes';
 import * as actionCreators from './actionCreators';
-import * as reducers from './reducers';
+import * as reducers from './reducers/index';
 import * as selectors from './selectors';
-import * as epics from './epics';
+import * as epics from './epics/index';
 
-export { actionTypes, actionCreators, reducers, selectors, epics };
+export const uiRedux = {
+  actionTypes,
+  actionCreators,
+  reducers,
+  selectors,
+  epics
+};
