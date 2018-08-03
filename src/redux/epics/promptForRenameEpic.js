@@ -1,4 +1,4 @@
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 import { RENAME_FILE } from '../actionTypes';
 import { fileRenamed } from '../actionCreators';
 
@@ -7,6 +7,9 @@ export const promptForRenameEpic = action$ =>
     map(action => {
       const oldFileName = action.fileName;
       const newFileName = window.prompt('Please enter a new file name.', oldFileName);
-      return fileRenamed(oldFileName, newFileName);
-    })
+      return newFileName && newFileName !== oldFileName
+        ? fileRenamed(oldFileName, newFileName)
+        : null;
+    }),
+    filter(Boolean)
   );
