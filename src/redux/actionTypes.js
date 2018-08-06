@@ -16,3 +16,6 @@ export const RENAME_FILE = prefix('RENAME_FILE');
 export const FILE_RENAMED = prefix('FILE_RENAMED');
 export const DELETE_FILE = prefix('DELETE_FILE');
 export const FILE_DELETED = prefix('FILE_DELETED');
+export const FORK_VISUALIZATION = prefix('FORK_VISUALIZATION');
+export const FORK_SUCCESS = prefix('FORK_SUCCESS');
+export const FORK_ERROR = prefix('FORK_ERROR');
