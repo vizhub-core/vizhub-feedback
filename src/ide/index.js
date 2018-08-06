@@ -18,7 +18,8 @@ const {
     setActiveFile,
     createNewFile,
     renameFile,
-    deleteFile
+    deleteFile,
+    forkVisualization
   }
 } = uiRedux;
 
@@ -29,7 +30,7 @@ const mapStateToProps = state => ({
   visualizationWidth: getVisualizationWidth(state),
   visualizationHeight: getVisualizationHeight(state),
   runId: getRunId(state),
-  saveStatus: getSaveStatus(state)
+  saveStatus: getSaveStatus(state),
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -37,7 +38,8 @@ const mapDispatchToProps = dispatch => ({
   onFileTextChange: (fileName, text) => dispatch(changeFileText(fileName, text)),
   onNewFileClick: () => dispatch(createNewFile()),
   onFileDoubleClick: fileName => dispatch(renameFile(fileName)),
-  onFileDelete: fileName => dispatch(deleteFile(fileName))
+  onFileDelete: fileName => dispatch(deleteFile(fileName)),
+  onFork: () => dispatch(forkVisualization()),
 });
 
 export const IDEContainer = connect(

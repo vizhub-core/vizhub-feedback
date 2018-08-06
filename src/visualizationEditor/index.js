@@ -12,7 +12,8 @@ export const VisualizationEditor = props => {
     onFileDoubleClick,
     onFileTextChange,
     onNewFileClick,
-    onFileDelete
+    onFileDelete,
+    onFork
   } = props;
 
   const onNewFileLinkClick = event => {
@@ -33,9 +34,18 @@ export const VisualizationEditor = props => {
         <a
           className='action-link'
           href='#new-file'
+          title='Create a new file'
           onClick={onNewFileLinkClick}
         >
           new file
+        </a>
+        <a
+          className='action-link'
+          href='#fork'
+          title='Fork this visualization'
+          onClick={onFork}
+        >
+          fork
         </a>
       </EditorGrid.Left>
       <EditorGrid.Center>

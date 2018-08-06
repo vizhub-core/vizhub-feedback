@@ -1,6 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
+const BACKSPACE = 8;
+const DELETE = 46;
+
 export const FileList = props => {
   const {
     files,
@@ -11,9 +14,6 @@ export const FileList = props => {
   } = props;
 
   const isActive = file => file.name === activeFileName;
-
-  const BACKSPACE = 8;
-  const DELETE = 46;
 
   const onKeyDown = event => {
     if (event.keyCode === BACKSPACE || event.keyCode === DELETE) {
