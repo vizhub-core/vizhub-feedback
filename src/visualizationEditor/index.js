@@ -2,6 +2,7 @@ import React from 'react';
 import { EditorGrid } from './editorGrid';
 import { CodeEditor } from './codeEditor';
 import { FileList } from './fileList';
+import { preventDefault } from './preventDefault'
 
 export const VisualizationEditor = props => {
   const {
@@ -15,11 +16,6 @@ export const VisualizationEditor = props => {
     onFileDelete,
     onFork
   } = props;
-
-  const onNewFileLinkClick = event => {
-    event.preventDefault();
-    onNewFileClick();
-  };
 
   return (
     <EditorGrid>
@@ -35,7 +31,7 @@ export const VisualizationEditor = props => {
           className='action-link'
           href='#new-file'
           title='Create a new file'
-          onClick={onNewFileLinkClick}
+          onClick={preventDefault(onNewFileClick)}
         >
           new file
         </a>
@@ -43,7 +39,7 @@ export const VisualizationEditor = props => {
           className='action-link'
           href='#fork'
           title='Fork this visualization'
-          onClick={onFork}
+          onClick={preventDefault(onFork)}
         >
           fork
         </a>
