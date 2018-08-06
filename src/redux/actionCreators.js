@@ -13,7 +13,10 @@ import {
   RENAME_FILE,
   FILE_RENAMED,
   DELETE_FILE,
-  FILE_DELETED
+  FILE_DELETED,
+  FORK_VISUALIZATION,
+  FORK_ERROR,
+  FORK_SUCCESS,
 } from './actionTypes';
 
 export const initFiles = files => ({
