@@ -1,5 +1,6 @@
 import { debounceTime, map } from 'rxjs/operators';
-import { CHANGE_FILE_TEXT } from '../actionTypes';
+import { combineEpics } from 'redux-observable';
+import { CHANGE_FILE_TEXT, INIT_FILES } from '../actionTypes';
 import { setTitle } from '../actionCreators';
 import { runDebounceTime } from '../../constants';
 import { getFiles } from '../selectors';
@@ -10,8 +11,18 @@ const extractTitle = files => {
   return titleMatch ? titleMatch[1] : 'Untitled';
 };
 
-export const updateTitleEpic = (action$, state$) =>
+const updateTitleOnChangeFileText = (action$, state$) =>
   action$.ofType(CHANGE_FILE_TEXT).pipe(
     debounceTime(runDebounceTime),
     map(action => setTitle(extractTitle(getFiles(state$.value))))
   );
+
+const updateTitleOnInitFiles = (action$, state$) =>
+  action$.ofType(INIT_FILES).pipe(
+    map(action => setTitle(extractTitle(getFiles(state$.value))))
+  );
+
+export const updateTitleEpic = combineEpics(
+  updateTitleOnChangeFileText,
+  updateTitleOnInitFiles
+);
