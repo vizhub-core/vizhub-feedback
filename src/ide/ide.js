@@ -1,7 +1,7 @@
 import React from 'react';
 import { IDEGrid } from './ideGrid';
 import { VisualizationEditor } from '../visualizationEditor/index';
-import { VisualizationRunner } from '../visualizationRunner/index';
+import { VisualizationView } from '../visualizationView/index';
 
 export const IDE = props => {
   const {
@@ -17,7 +17,8 @@ export const IDE = props => {
     runId,
     saveStatus,
     onFileDelete,
-    onFork
+    onFork,
+    visualizationTitle
   } = props;
 
   return (
@@ -37,11 +38,12 @@ export const IDE = props => {
         <div className='save-status'>{saveStatus}</div>
       </IDEGrid.Left>
       <IDEGrid.Right>
-        <VisualizationRunner
+        <VisualizationView
           files={files}
           width={visualizationWidth}
           height={visualizationHeight}
           runId={runId}
+          title={visualizationTitle}
         />
       </IDEGrid.Right>
     </IDEGrid>
