@@ -7,6 +7,7 @@ import {
   SAVE_ERROR,
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
+  SET_VISUALIZATION_TITLE,
   RUN_FILES,
   CREATE_NEW_FILE,
   NEW_FILE_CREATED,
@@ -104,4 +105,9 @@ export const forkSuccess = (id, userName) => ({
 
 export const forkError = () => ({
   type: FORK_ERROR
+});
+
+export const setTitle = title => ({
+  type: SET_VISUALIZATION_TITLE,
+  title
 });
