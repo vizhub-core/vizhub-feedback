@@ -14,3 +14,4 @@ export const getVisualizationWidth = state => state.ide.visualizationWidth;
 export const getVisualizationHeight = state => state.ide.visualizationHeight;
 export const getRunId = state => state.ide.runId;
 export const getSaveStatus = state => state.ide.saveStatus;
+export const getVisualizationTitle = state => state.ide.visualizationTitle;

@@ -11,7 +11,8 @@ const {
     getVisualizationWidth,
     getVisualizationHeight,
     getRunId,
-    getSaveStatus
+    getSaveStatus,
+    getVisualizationTitle,
   },
   actionCreators: {
     changeFileText,
@@ -31,6 +32,7 @@ const mapStateToProps = state => ({
   visualizationHeight: getVisualizationHeight(state),
   runId: getRunId(state),
   saveStatus: getSaveStatus(state),
+  visualizationTitle: getVisualizationTitle(state),
 });
 
 const mapDispatchToProps = dispatch => ({
