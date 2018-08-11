@@ -4,6 +4,7 @@ import { files } from './files';
 import { activeFileName } from './activeFileName';
 import { visualizationWidth } from './visualizationWidth';
 import { visualizationHeight } from './visualizationHeight';
+import { visualizationOwnerUser } from './visualizationOwnerUser';
 import { runId } from './runId';
 import { saveStatus } from './saveStatus';
 import { visualizationTitle } from './visualizationTitle';
@@ -13,6 +14,7 @@ export const ide = combineReducers({
   activeFileName,
   visualizationWidth,
   visualizationHeight,
+  visualizationOwnerUser,
   runId,
   saveStatus,
   visualizationTitle,
