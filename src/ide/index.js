@@ -13,6 +13,7 @@ const {
     getRunId,
     getSaveStatus,
     getVisualizationTitle,
+    getVisualizationOwnerUser,
   },
   actionCreators: {
     changeFileText,
@@ -33,6 +34,7 @@ const mapStateToProps = state => ({
   runId: getRunId(state),
   saveStatus: getSaveStatus(state),
   visualizationTitle: getVisualizationTitle(state),
+  visualizationOwnerUser: getVisualizationOwnerUser(state),
 });
 
 const mapDispatchToProps = dispatch => ({

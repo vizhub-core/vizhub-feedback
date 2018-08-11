@@ -20,3 +20,4 @@ export const FILE_DELETED = prefix('FILE_DELETED');
 export const FORK_VISUALIZATION = prefix('FORK_VISUALIZATION');
 export const FORK_SUCCESS = prefix('FORK_SUCCESS');
 export const FORK_ERROR = prefix('FORK_ERROR');
+export const SET_VISUALIZATION_OWNER_USER = prefix('SET_VISUALIZATION_OWNER_USER');

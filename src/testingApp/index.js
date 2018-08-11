@@ -16,7 +16,8 @@ const {
     initFiles,
     setActiveFile,
     setVisualizationWidth,
-    setVisualizationHeight
+    setVisualizationHeight,
+    setVisualizationOwnerUser
   },
   epics: {
     runEpic,
@@ -49,6 +50,12 @@ store.dispatch(initFiles(files));
 store.dispatch(setActiveFile('index.html'));
 store.dispatch(setVisualizationWidth(960));
 store.dispatch(setVisualizationHeight(500));    
+store.dispatch(setVisualizationOwnerUser({
+  id: "84752",
+  userName: "joe",
+  fullName: "Joe Schmoe",
+  avatarUrl: "https://avatars3.githubusercontent.com/u/84752?v=4",
+}));    
 
 render(
   <Provider store={store}>

@@ -2,7 +2,7 @@ import React from 'react';
 import { EditorGrid } from './editorGrid';
 import { CodeEditor } from './codeEditor';
 import { FileList } from './fileList';
-import { preventDefault } from './preventDefault'
+import { preventDefault } from '../utils/preventDefault'
 
 export const VisualizationEditor = props => {
   const {
