@@ -15,7 +15,7 @@ export const files = (state = [], action) => {
     case CHANGE_FILE_TEXT:
       return state.map(file => (
         file.name === action.fileName
-          ? Object.assign(file, { text: action.text })
+          ? Object.assign({}, file, { text: action.text })
           : file
       ));
     case BUILD_FINISHED:
