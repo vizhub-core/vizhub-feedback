@@ -25,7 +25,8 @@ const {
     promptForNewFileNameEpic,
     promptForRenameEpic,
     confirmDeleteEpic,
-    updateTitleEpic
+    updateTitleEpic,
+    updateDescriptionEpic
   }
 } = uiRedux;
 
@@ -43,7 +44,8 @@ epicMiddleware.run(combineEpics(
   promptForNewFileNameEpic,
   promptForRenameEpic,
   confirmDeleteEpic,
-  updateTitleEpic
+  updateTitleEpic,
+  updateDescriptionEpic
 ));
 
 store.dispatch(initFiles(files));

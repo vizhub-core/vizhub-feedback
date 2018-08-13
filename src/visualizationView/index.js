@@ -1,9 +1,8 @@
 import React from 'react';
 import { VisualizationRunner } from '../visualizationRunner/index.js';
-import { preventDefault } from '../utils/preventDefault'
 
 export const VisualizationView = props => {
-  const { width, height, files, runId, title, ownerUser } = props;
+  const { width, height, files, runId, title, description, ownerUser } = props;
   return (
     <div className='visualization-view'>
       <VisualizationRunner
@@ -19,6 +18,13 @@ export const VisualizationView = props => {
         <a href={`/${ownerUser.userName}`} >
           {ownerUser.fullName}
         </a>
+        <div
+          className='visualization-view-description'
+          dangerouslySetInnerHTML={{
+            __html: description
+          }}
+        >
+        </div>
       </div>
     </div>
   );

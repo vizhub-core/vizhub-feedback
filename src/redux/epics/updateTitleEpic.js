@@ -1,6 +1,5 @@
 import { merge } from 'rxjs';
 import { debounceTime, map, filter } from 'rxjs/operators';
-import { combineEpics } from 'redux-observable';
 import { CHANGE_FILE_TEXT, INIT_FILES } from '../actionTypes';
 import { setTitle } from '../actionCreators';
 import { runDebounceTime } from '../../constants';
@@ -19,7 +18,8 @@ export const updateTitleEpic = (action$, state$) =>
       debounceTime(runDebounceTime)
     ),
   )
-  .pipe(map(action => {
-    console.log('setting title');
-    return setTitle(extractTitle(getFile(state$.value, 'index.html')))
-  }));
+  .pipe(
+    map(action =>
+      setTitle(extractTitle(getFile(state$.value, 'index.html')))
+    )
+  );
