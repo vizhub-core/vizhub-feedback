@@ -5,8 +5,8 @@ import { setTitle } from '../actionCreators';
 import { runDebounceTime } from '../../constants';
 import { getFile } from '../selectors';
 
-const extractTitle = html => {
-  const titleMatch = html.text.match(/<title>(.*?)<\/title>/i);
+const extractTitle = htmlFile => {
+  const titleMatch = htmlFile.text.match(/<title>(.*?)<\/title>/i);
   return titleMatch ? titleMatch[1] : 'Untitled';
 };
 

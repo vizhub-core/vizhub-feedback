@@ -18,7 +18,8 @@ export const updateDescriptionEpic = (action$, state$) =>
       debounceTime(runDebounceTime)
     ),
   )
-  .pipe(map(action => {
-    console.log('setting description');
-    return setDescription(renderMarkdown(getFile(state$.value, 'README.md')))
-  }));
+  .pipe(
+    map(action => (
+      setDescription(renderMarkdown(getFile(state$.value, 'README.md')))
+    ))
+  );
