@@ -13,6 +13,7 @@ const {
     getRunId,
     getSaveStatus,
     getVisualizationTitle,
+    getVisualizationDescription,
     getVisualizationOwnerUser,
   },
   actionCreators: {
@@ -34,6 +35,7 @@ const mapStateToProps = state => ({
   runId: getRunId(state),
   saveStatus: getSaveStatus(state),
   visualizationTitle: getVisualizationTitle(state),
+  visualizationDescription: getVisualizationDescription(state),
   visualizationOwnerUser: getVisualizationOwnerUser(state),
 });
 

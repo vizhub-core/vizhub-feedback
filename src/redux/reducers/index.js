@@ -8,6 +8,7 @@ import { visualizationOwnerUser } from './visualizationOwnerUser';
 import { runId } from './runId';
 import { saveStatus } from './saveStatus';
 import { visualizationTitle } from './visualizationTitle';
+import { visualizationDescription } from './visualizationDescription';
 
 export const ide = combineReducers({
   files,
@@ -18,4 +19,5 @@ export const ide = combineReducers({
   runId,
   saveStatus,
   visualizationTitle,
+  visualizationDescription,
 });

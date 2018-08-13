@@ -19,6 +19,7 @@ export const IDE = props => {
     onFileDelete,
     onFork,
     visualizationTitle,
+    visualizationDescription,
     visualizationOwnerUser
   } = props;
 
@@ -45,6 +46,7 @@ export const IDE = props => {
           height={visualizationHeight}
           runId={runId}
           title={visualizationTitle}
+          description={visualizationDescription}
           ownerUser={visualizationOwnerUser}
         />
       </IDEGrid.Right>

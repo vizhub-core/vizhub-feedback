@@ -15,5 +15,10 @@ export const getVisualizationHeight = state => state.ide.visualizationHeight;
 export const getRunId = state => state.ide.runId;
 export const getSaveStatus = state => state.ide.saveStatus;
 export const getVisualizationTitle = state => state.ide.visualizationTitle;
+export const getVisualizationDescription = state => state.ide.visualizationDescription;
+
 export const getVisualizationOwnerUser = state =>
   state.ide.visualizationOwnerUser;
+
+export const getFile = (state, fileName) => getFiles(state)
+  .filter(file => file.name === fileName)[0];

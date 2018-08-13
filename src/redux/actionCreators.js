@@ -8,6 +8,7 @@ import {
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
   SET_VISUALIZATION_TITLE,
+  SET_VISUALIZATION_DESCRIPTION,
   SET_VISUALIZATION_OWNER_USER,
   RUN_FILES,
   CREATE_NEW_FILE,
@@ -116,4 +117,9 @@ export const setTitle = title => ({
 export const setVisualizationOwnerUser = user => ({
   type: SET_VISUALIZATION_OWNER_USER,
   user
+});
+
+export const setDescription = description => ({
+  type: SET_VISUALIZATION_DESCRIPTION,
+  description
 });
