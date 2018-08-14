@@ -30,11 +30,11 @@
     "lodash": "^4.17.10",
     "magic-sandbox": "^1.2.0",
     "marked": "^0.4.0",
-    "node-sass": "^4.9.2",
-    "react": "^16.4.1",
+    "node-sass": "^4.9.3",
+    "react": "^16.4.2",
     "react-codemirror2": "^5.1.0",
-    "react-dom": "^16.4.1",
-    "react-measure": "^2.0.2",
+    "react-dom": "^16.4.2",
+    "react-measure": "^2.1.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/datavis-tech/vizhub-ui#readme",
   "devDependencies": {
-    "rollup": "^0.63.5",
+    "rollup": "^0.64.1",
     "rollup-plugin-buble": "^0.19.2"
   }
 }
