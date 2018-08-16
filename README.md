@@ -8,9 +8,13 @@ It also has our [public backlog](https://github.com/datavis-tech/vizhub-ui/issue
  * If you discover bugs or have ideas for new features, please [open an issue](https://github.com/datavis-tech/vizhub-ui/issues/new?template=upvotable.md).
  * If you want to contribute code changes, see [contribution guidelines](CONTRIBUTING.md).
 
-To learn more, see also:
- * [Medium: Introducing VizHub](https://medium.com/@currankelleher/introducing-vizhub-75644cb8bba6).
- * [YouTube: VizHub Alpha Intro](https://www.youtube.com/watch?v=5KlhI67cueI&feature=youtu.be)
+Medium Posts:
+ * [Introducing VizHub Alpha](https://medium.com/@currankelleher/introducing-vizhub-75644cb8bba6)
+ * [Introducing VizHub Beta](https://medium.com/@currankelleher/introducing-vizhub-beta-2edc4a0a1908)
+
+YouTube videos:
+ * [VizHub Alpha Intro](https://www.youtube.com/watch?v=5KlhI67cueI&feature=youtu.be)
+ * [VizHub Beta Demo](https://www.youtube.com/watch?v=qaOzZ7L3dJo)
 
 To get involved and stay updated:
 
