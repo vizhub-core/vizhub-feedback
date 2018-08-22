@@ -51,7 +51,8 @@ export class CodeEditor extends Component {
           options={{
             mode: getMode(fileName),
             theme: 'ubuntu',
-            lineNumbers: true
+            lineNumbers: true,
+            lineWrapping: true
           }}
           onBeforeChange={(editor, data, value) => {
             onTextChange(value)
