@@ -43,6 +43,20 @@ export const VisualizationEditor = props => {
         >
           fork
         </a>
+        <a
+          className='action-link preview'
+          href='https://github.com/datavis-tech/vizhub-ui/issues/43'
+          title='Download the code for this visualization'
+        >
+          download
+        </a>
+        <a
+          className='action-link preview'
+          href='https://github.com/datavis-tech/vizhub-ui/issues/88'
+          title='Delete this visualization'
+        >
+          delete
+        </a>
       </EditorGrid.Left>
       <EditorGrid.Center>
         <CodeEditor
