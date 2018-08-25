@@ -1,8 +1,13 @@
 import React from 'react';
+import SplitPane from 'react-split-pane';
 
 export const IDEGrid = ({children}) => (
   <div className='ide-grid'>
-    { children }
+    <SplitPane split='vertical' defaultSize='50%'>
+      { 
+        children
+      }
+    </SplitPane>
   </div>
 );
 
