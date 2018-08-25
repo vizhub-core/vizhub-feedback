@@ -46,6 +46,7 @@ export const VisualizationEditor = props => {
         <a
           className='action-link preview'
           href='https://github.com/datavis-tech/vizhub-ui/issues/43'
+          target='_blank'
           title='Download the code for this visualization'
         >
           download
@@ -53,6 +54,7 @@ export const VisualizationEditor = props => {
         <a
           className='action-link preview'
           href='https://github.com/datavis-tech/vizhub-ui/issues/88'
+          target='_blank'
           title='Delete this visualization'
         >
           delete
