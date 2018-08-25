@@ -1,15 +1,26 @@
 import React from 'react';
 import SplitPane from 'react-split-pane';
 
-export const IDEGrid = ({children}) => (
-  <div className='ide-grid'>
-    <SplitPane split='vertical' defaultSize='50%'>
-      { 
-        children
-      }
-    </SplitPane>
-  </div>
-);
+export const IDEGrid = props => {
+  const {
+    children,
+    onSplitPaneDragStarted,
+    onSplitPaneDragFinished
+  } = props;
+
+  return (
+    <div className='ide-grid'>
+      <SplitPane
+        split='vertical'
+        defaultSize='50%'
+        onDragStarted={onSplitPaneDragStarted}
+        onDragFinished={onSplitPaneDragFinished}
+      >
+        { children }
+      </SplitPane>
+    </div>
+  );
+};
 
 IDEGrid.Left = ({children}) => (
   <div className='ide-grid-left'>

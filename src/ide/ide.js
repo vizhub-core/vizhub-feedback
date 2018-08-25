@@ -20,11 +20,17 @@ export const IDE = props => {
     onFork,
     visualizationTitle,
     visualizationDescription,
-    visualizationOwnerUser
+    visualizationOwnerUser,
+    onSplitPaneDragStarted,
+    onSplitPaneDragFinished,
+    splitPaneDragging
   } = props;
 
   return (
-    <IDEGrid>
+    <IDEGrid
+      onSplitPaneDragStarted={onSplitPaneDragStarted}
+      onSplitPaneDragFinished={onSplitPaneDragFinished}
+    >
       <IDEGrid.Left>
         <VisualizationEditor
           files={files}
@@ -48,6 +54,7 @@ export const IDE = props => {
           title={visualizationTitle}
           description={visualizationDescription}
           ownerUser={visualizationOwnerUser}
+          disablePointerEvents={splitPaneDragging}
         />
       </IDEGrid.Right>
     </IDEGrid>

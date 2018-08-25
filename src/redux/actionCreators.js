@@ -20,6 +20,8 @@ import {
   FORK_VISUALIZATION,
   FORK_ERROR,
   FORK_SUCCESS,
+  SPLIT_PANE_DRAG_STARTED,
+  SPLIT_PANE_DRAG_FINISHED,
 } from './actionTypes';
 
 export const initFiles = files => ({
@@ -122,4 +124,12 @@ export const setVisualizationOwnerUser = user => ({
 export const setDescription = description => ({
   type: SET_VISUALIZATION_DESCRIPTION,
   description
+});
+
+export const splitPaneDragStarted = () => ({
+  type: SPLIT_PANE_DRAG_STARTED
+});
+
+export const splitPaneDragFinished = () => ({
+  type: SPLIT_PANE_DRAG_FINISHED
 });
