@@ -2,9 +2,21 @@ import React from 'react';
 import { VisualizationRunner } from '../visualizationRunner/index.js';
 
 export const VisualizationView = props => {
-  const { width, height, files, runId, title, description, ownerUser } = props;
+  const {
+    width,
+    height,
+    files,
+    runId,
+    title,
+    description,
+    ownerUser,
+    disablePointerEvents
+  } = props;
+
+  const pointerEvents = disablePointerEvents ? 'none' : 'auto';
+
   return (
-    <div className='visualization-view'>
+    <div className='visualization-view' style={{ pointerEvents }} >
       <VisualizationRunner
         files={files}
         width={width}

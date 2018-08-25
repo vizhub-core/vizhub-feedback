@@ -15,6 +15,7 @@ const {
     getVisualizationTitle,
     getVisualizationDescription,
     getVisualizationOwnerUser,
+    getSplitPaneDragging
   },
   actionCreators: {
     changeFileText,
@@ -22,7 +23,9 @@ const {
     createNewFile,
     renameFile,
     deleteFile,
-    forkVisualization
+    forkVisualization,
+    splitPaneDragStarted,
+    splitPaneDragFinished,
   }
 } = uiRedux;
 
@@ -37,6 +40,7 @@ const mapStateToProps = state => ({
   visualizationTitle: getVisualizationTitle(state),
   visualizationDescription: getVisualizationDescription(state),
   visualizationOwnerUser: getVisualizationOwnerUser(state),
+  splitPaneDragging: getSplitPaneDragging(state)
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -46,6 +50,8 @@ const mapDispatchToProps = dispatch => ({
   onFileDoubleClick: fileName => dispatch(renameFile(fileName)),
   onFileDelete: fileName => dispatch(deleteFile(fileName)),
   onFork: () => dispatch(forkVisualization()),
+  onSplitPaneDragStarted: () => dispatch(splitPaneDragStarted()),
+  onSplitPaneDragFinished: () => dispatch(splitPaneDragFinished()),
 });
 
 export const IDEContainer = connect(

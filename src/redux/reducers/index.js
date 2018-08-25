@@ -9,6 +9,7 @@ import { runId } from './runId';
 import { saveStatus } from './saveStatus';
 import { visualizationTitle } from './visualizationTitle';
 import { visualizationDescription } from './visualizationDescription';
+import { splitPaneDragging } from './splitPaneDragging';
 
 export const ide = combineReducers({
   files,
@@ -20,4 +21,5 @@ export const ide = combineReducers({
   saveStatus,
   visualizationTitle,
   visualizationDescription,
+  splitPaneDragging
 });

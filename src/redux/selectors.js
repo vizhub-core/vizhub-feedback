@@ -22,3 +22,5 @@ export const getVisualizationOwnerUser = state =>
 
 export const getFile = (state, fileName) => getFiles(state)
   .filter(file => file.name === fileName)[0];
+
+export const getSplitPaneDragging = state => state.ide.splitPaneDragging;
