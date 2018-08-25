@@ -3,7 +3,10 @@
 .Resizer
   background: #000
   opacity: .2
-  z-index: 3 // Above CodeMirror, which is 2.
+
+  // Above CodeMirror, whose editor is 2 and scrollbar is 6.
+  z-index: 7
+
   box-sizing: border-box
   background-clip: padding-box
 .Resizer.vertical
@@ -18,8 +21,8 @@
 
 .ide-grid
   height: 100%
-  width: 100%
   .ide-grid-left
+    height: 100%
     position: relative
     .save-status
       position: absolute
@@ -29,5 +32,7 @@
       font-size: $font-size-for-code
       color: rgba(173, 127, 168, 0.6)
   .ide-grid-right
+    flex: auto
+    min-width: 10px
     overflow-x: hidden
     overflow-y: auto
