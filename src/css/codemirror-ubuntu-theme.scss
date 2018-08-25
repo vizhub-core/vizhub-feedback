@@ -17,7 +17,7 @@ $editor-purple: #ad7fa8;
   border: none;
 }
 .cm-s-ubuntu .CodeMirror-guttermarker, .cm-s-ubuntu .CodeMirror-guttermarker-subtle, .cm-s-ubuntu .CodeMirror-linenumber { color: $editor-yellow; }
-.cm-s-ubuntu .CodeMirror-cursor { border-left: 1px solid white; }
+.cm-s-ubuntu .CodeMirror-cursor { border-left: 1px solid white; border-right: 1px solid white; }
 .cm-s-ubuntu div.CodeMirror-selected { background: $editor-selected-background; }
 .cm-s-ubuntu.CodeMirror-focused div.CodeMirror-selected { background: $editor-selected-background; }
 
