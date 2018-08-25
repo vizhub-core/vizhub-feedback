@@ -37,6 +37,7 @@
     "react-measure": "^2.1.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
+    "react-split-pane": "^0.1.82",
     "redux": "^4.0.0",
     "redux-observable": "^1.0.0",
     "rxjs": "^6.2.2"
