@@ -14,7 +14,8 @@ export const VisualizationEditor = props => {
     onFileTextChange,
     onNewFileClick,
     onFileDelete,
-    onFork
+    onFork,
+    visualizationId
   } = props;
 
   return (
@@ -44,12 +45,12 @@ export const VisualizationEditor = props => {
           fork
         </a>
         <a
-          className='action-link preview'
-          href='https://github.com/datavis-tech/vizhub-ui/issues/43'
+          className='action-link'
+          href={`/api/visualization/export/${visualizationId}`}
           target='_blank'
           title='Download the code for this visualization'
         >
-          download
+          export
         </a>
         <a
           className='action-link preview'
