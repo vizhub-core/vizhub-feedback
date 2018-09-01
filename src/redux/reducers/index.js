@@ -8,6 +8,7 @@ import { visualizationOwnerUser } from './visualizationOwnerUser';
 import { runId } from './runId';
 import { saveStatus } from './saveStatus';
 import { visualizationTitle } from './visualizationTitle';
+import { visualizationId } from './visualizationId';
 import { visualizationDescription } from './visualizationDescription';
 import { splitPaneDragging } from './splitPaneDragging';
 
@@ -20,6 +21,7 @@ export const ide = combineReducers({
   runId,
   saveStatus,
   visualizationTitle,
+  visualizationId,
   visualizationDescription,
   splitPaneDragging
 });

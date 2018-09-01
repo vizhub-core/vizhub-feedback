@@ -17,6 +17,7 @@ const {
     setActiveFile,
     setVisualizationWidth,
     setVisualizationHeight,
+    setVisualizationId,
     setVisualizationOwnerUser
   },
   epics: {
@@ -52,6 +53,7 @@ store.dispatch(initFiles(files));
 store.dispatch(setActiveFile('index.html'));
 store.dispatch(setVisualizationWidth(960));
 store.dispatch(setVisualizationHeight(500));    
+store.dispatch(setVisualizationId('1234'));    
 store.dispatch(setVisualizationOwnerUser({
   id: "84752",
   userName: "joe",

@@ -13,6 +13,7 @@ const {
     getRunId,
     getSaveStatus,
     getVisualizationTitle,
+    getVisualizationId,
     getVisualizationDescription,
     getVisualizationOwnerUser,
     getSplitPaneDragging
@@ -38,6 +39,7 @@ const mapStateToProps = state => ({
   runId: getRunId(state),
   saveStatus: getSaveStatus(state),
   visualizationTitle: getVisualizationTitle(state),
+  visualizationId: getVisualizationId(state),
   visualizationDescription: getVisualizationDescription(state),
   visualizationOwnerUser: getVisualizationOwnerUser(state),
   splitPaneDragging: getSplitPaneDragging(state)

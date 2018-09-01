@@ -19,6 +19,7 @@ export const IDE = props => {
     onFileDelete,
     onFork,
     visualizationTitle,
+    visualizationId,
     visualizationDescription,
     visualizationOwnerUser,
     onSplitPaneDragStarted,
@@ -42,6 +43,7 @@ export const IDE = props => {
           onNewFileClick={onNewFileClick}
           onFileDelete={onFileDelete}
           onFork={onFork}
+          visualizationId={visualizationId}
         />
         <div className='save-status'>{saveStatus}</div>
       </IDEGrid.Left>

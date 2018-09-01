@@ -8,6 +8,7 @@ import {
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
   SET_VISUALIZATION_TITLE,
+  SET_VISUALIZATION_ID,
   SET_VISUALIZATION_DESCRIPTION,
   SET_VISUALIZATION_OWNER_USER,
   RUN_FILES,
@@ -114,6 +115,11 @@ export const forkError = () => ({
 export const setTitle = title => ({
   type: SET_VISUALIZATION_TITLE,
   title
+});
+
+export const setVisualizationId = id => ({
+  type: SET_VISUALIZATION_ID,
+  id
 });
 
 export const setVisualizationOwnerUser = user => ({
