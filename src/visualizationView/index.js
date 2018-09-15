@@ -36,6 +36,7 @@ export const VisualizationView = props => {
         >
         </div>
       </div>
+      <div className='license-info'>All code in VizHub is released under the MIT License.</div>
     </div>
   );
 };
