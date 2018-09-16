@@ -23,6 +23,7 @@ export class RunnerIFrame extends Component {
     const { width, height, scale } = this.props;
     return (
       <iframe
+        className='visualization-runner'
         ref={this.iFrameRef}
         width={width}
         height={height}
