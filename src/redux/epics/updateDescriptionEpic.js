@@ -6,9 +6,15 @@ import { setDescription } from '../actionCreators';
 import { runDebounceTime } from '../../constants';
 import { getFile } from '../selectors';
 
-const renderMarkdown = markdownFile => {
-  return markdownFile ? marked(markdownFile.text) : '';
-};
+const responsiveYouTube = html => html
+  .replace(/<iframe(.+)youtube(.+)<\/iframe>/g, match =>
+    `<div class='responsive-youtube'>${match}</div>`
+  );
+
+const renderMarkdown = markdownFile =>
+  markdownFile
+    ? responsiveYouTube(marked(markdownFile.text))
+    : '';
 
 export const updateDescriptionEpic = (action$, state$) =>
   merge(
