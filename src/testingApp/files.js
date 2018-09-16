@@ -24,7 +24,9 @@ const defaultIndexJS =
 `console.log('Hello World!');`;
 
 const defaultReadmeMD =
-`This is a cool [dataviz](https://twitter.com/search?q=%23dataviz)!`;
+`This is a cool [dataviz](https://twitter.com/search?q=%23dataviz)!
+ 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NlBt-7PuaLk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
 
 export const files = [
   { name: 'index.html', text: defaultIndexHTML },
