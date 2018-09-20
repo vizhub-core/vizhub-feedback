@@ -5,6 +5,7 @@ import {
   SAVE,
   SAVE_SUCCESS,
   SAVE_ERROR,
+  SET_HEIGHT_PROMPT,
   SET_VISUALIZATION_WIDTH,
   SET_VISUALIZATION_HEIGHT,
   SET_VISUALIZATION_TITLE,
@@ -138,4 +139,8 @@ export const splitPaneDragStarted = () => ({
 
 export const splitPaneDragFinished = () => ({
   type: SPLIT_PANE_DRAG_FINISHED
+});
+
+export const setHeightPrompt = () => ({
+  type: SET_HEIGHT_PROMPT
 });

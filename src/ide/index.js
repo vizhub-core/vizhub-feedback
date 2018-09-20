@@ -27,6 +27,7 @@ const {
     forkVisualization,
     splitPaneDragStarted,
     splitPaneDragFinished,
+    setHeightPrompt,
   }
 } = uiRedux;
 
@@ -52,6 +53,7 @@ const mapDispatchToProps = dispatch => ({
   onFileDoubleClick: fileName => dispatch(renameFile(fileName)),
   onFileDelete: fileName => dispatch(deleteFile(fileName)),
   onFork: () => dispatch(forkVisualization()),
+  onSetHeight: () => dispatch(setHeightPrompt()),
   onSplitPaneDragStarted: () => dispatch(splitPaneDragStarted()),
   onSplitPaneDragFinished: () => dispatch(splitPaneDragFinished()),
 });
