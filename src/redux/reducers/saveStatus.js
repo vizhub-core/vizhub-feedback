@@ -2,7 +2,8 @@ import {
   CHANGE_FILE_TEXT,
   SAVE,
   SAVE_SUCCESS,
-  SAVE_ERROR
+  SAVE_ERROR,
+  SET_VISUALIZATION_HEIGHT
 } from '../actionTypes';
 
 export const saveStatus = (state = 'Saved', action) => {
@@ -14,6 +15,8 @@ export const saveStatus = (state = 'Saved', action) => {
     case SAVE_ERROR:
       return action.error;
     case CHANGE_FILE_TEXT:
+      return '';
+    case SET_VISUALIZATION_HEIGHT:
       return '';
     default:
       return state;
