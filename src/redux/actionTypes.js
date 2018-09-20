@@ -7,6 +7,8 @@ export const RUN_FILES = prefix('RUN_FILES');
 export const SAVE = prefix('SAVE');
 export const SAVE_SUCCESS = prefix('SAVE_SUCCESS');
 export const SAVE_ERROR = prefix('SAVE_ERROR');
+
+export const SET_HEIGHT_PROMPT = prefix('SET_HEIGHT_PROMPT');
 export const SET_VISUALIZATION_WIDTH = prefix('SET_VISUALIZATION_WIDTH');
 export const SET_VISUALIZATION_HEIGHT = prefix('SET_VISUALIZATION_HEIGHT');
 export const SET_VISUALIZATION_TITLE = prefix('SET_VISUALIZATION_TITLE');

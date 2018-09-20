@@ -15,6 +15,7 @@ export const VisualizationEditor = props => {
     onNewFileClick,
     onFileDelete,
     onFork,
+    onSetHeight,
     visualizationId
   } = props;
 
@@ -43,6 +44,14 @@ export const VisualizationEditor = props => {
           onClick={preventDefault(onFork)}
         >
           fork
+        </a>
+        <a
+          className='action-link'
+          href='#set-height'
+          title='Set the visualization height'
+          onClick={preventDefault(onSetHeight)}
+        >
+          set height
         </a>
         <a
           className='action-link'

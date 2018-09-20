@@ -18,6 +18,7 @@ export const IDE = props => {
     saveStatus,
     onFileDelete,
     onFork,
+    onSetHeight,
     visualizationTitle,
     visualizationId,
     visualizationDescription,
@@ -43,6 +44,7 @@ export const IDE = props => {
           onNewFileClick={onNewFileClick}
           onFileDelete={onFileDelete}
           onFork={onFork}
+          onSetHeight={onSetHeight}
           visualizationId={visualizationId}
         />
         <div className='save-status'>{saveStatus}</div>
