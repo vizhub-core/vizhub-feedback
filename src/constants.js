@@ -1,3 +1,3 @@
 // Times are in milliseconds.
-export const runDebounceTime = 500;
-export const autoSaveDebounceTime = 3000;
+export const runDebounceTime = 800;
+export const autoSaveDebounceTime = 4000;
