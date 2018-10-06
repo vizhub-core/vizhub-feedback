@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { Controlled as CodeMirror } from 'react-codemirror2';
 
+if (process.browser) {
+  require('codemirror/mode/javascript/javascript');
+  require('codemirror/mode/xml/xml');
+  require('codemirror/mode/css/css');
+  require('codemirror/mode/htmlmixed/htmlmixed');
+  require('codemirror/mode/markdown/markdown');
+  require('codemirror/addon/comment/comment');
+}
+
 // This component depends on the following CSS:
 //   codemirror/lib/codemirror.css
 //   ../css/ubuntu.css
@@ -8,7 +17,8 @@ import { Controlled as CodeMirror } from 'react-codemirror2';
 const modes = {
   '.html': 'htmlmixed',
   '.css': 'css',
-  '.js': 'javascript'
+  '.js': 'javascript',
+  '.md': 'markdown'
 };
 const extension = fileName => fileName.substr(fileName.lastIndexOf('.'));
 const getMode = fileName => modes[extension(fileName)];
@@ -36,11 +46,6 @@ export class CodeEditor extends Component {
       return null;
     }
 
-    require('codemirror/mode/javascript/javascript');
-    require('codemirror/mode/xml/xml');
-    require('codemirror/mode/css/css');
-    require('codemirror/mode/htmlmixed/htmlmixed');
-
     return (
       <div
         className='code-editor-container test-code-editor'
@@ -52,7 +57,11 @@ export class CodeEditor extends Component {
             mode: getMode(fileName),
             theme: 'ubuntu',
             lineNumbers: true,
-            lineWrapping: true
+            lineWrapping: true,
+            extraKeys: {
+              'Cmd-/': 'toggleComment',
+              'Ctrl-/': 'toggleComment'
+            }
           }}
           onBeforeChange={(editor, data, value) => {
             onTextChange(value)
