@@ -7,6 +7,7 @@ if (process.browser) {
   require('codemirror/mode/css/css');
   require('codemirror/mode/htmlmixed/htmlmixed');
   require('codemirror/mode/markdown/markdown');
+  require('codemirror/addon/comment/comment');
 }
 
 // This component depends on the following CSS:
@@ -56,7 +57,11 @@ export class CodeEditor extends Component {
             mode: getMode(fileName),
             theme: 'ubuntu',
             lineNumbers: true,
-            lineWrapping: true
+            lineWrapping: true,
+            extraKeys: {
+              'Cmd-/': 'toggleComment',
+              'Ctrl-/': 'toggleComment'
+            }
           }}
           onBeforeChange={(editor, data, value) => {
             onTextChange(value)
