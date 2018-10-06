@@ -25,7 +25,8 @@ export const IDE = props => {
     visualizationOwnerUser,
     onSplitPaneDragStarted,
     onSplitPaneDragFinished,
-    splitPaneDragging
+    splitPaneDragging,
+    onDeleteVisualization
   } = props;
 
   return (
@@ -46,6 +47,7 @@ export const IDE = props => {
           onFork={onFork}
           onSetHeight={onSetHeight}
           visualizationId={visualizationId}
+          onDeleteVisualization={onDeleteVisualization}
         />
         <div className='save-status'>{saveStatus}</div>
       </IDEGrid.Left>

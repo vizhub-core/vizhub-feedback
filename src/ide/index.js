@@ -28,6 +28,7 @@ const {
     splitPaneDragStarted,
     splitPaneDragFinished,
     setHeightPrompt,
+    deleteVisualization
   }
 } = uiRedux;
 
@@ -56,6 +57,7 @@ const mapDispatchToProps = dispatch => ({
   onSetHeight: () => dispatch(setHeightPrompt()),
   onSplitPaneDragStarted: () => dispatch(splitPaneDragStarted()),
   onSplitPaneDragFinished: () => dispatch(splitPaneDragFinished()),
+  onDeleteVisualization: () => dispatch(deleteVisualization())
 });
 
 export const IDEContainer = connect(
