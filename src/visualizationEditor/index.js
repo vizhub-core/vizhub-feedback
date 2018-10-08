@@ -16,7 +16,8 @@ export const VisualizationEditor = props => {
     onFileDelete,
     onFork,
     onSetHeight,
-    visualizationId
+    visualizationId,
+    onDeleteVisualization
   } = props;
 
   return (
@@ -62,9 +63,9 @@ export const VisualizationEditor = props => {
           export
         </a>
         <a
-          className='action-link preview'
-          href='https://github.com/datavis-tech/vizhub-ui/issues/88'
-          target='_blank'
+          className='action-link'
+          href='#delete-visualization'
+          onClick={preventDefault(onDeleteVisualization)}
           title='Delete this visualization'
         >
           delete

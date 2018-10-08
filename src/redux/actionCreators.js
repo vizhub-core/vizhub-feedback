@@ -24,6 +24,8 @@ import {
   FORK_SUCCESS,
   SPLIT_PANE_DRAG_STARTED,
   SPLIT_PANE_DRAG_FINISHED,
+  DELETE_VISUALIZATION,
+  VISUALIZATION_DELETED
 } from './actionTypes';
 
 export const initFiles = files => ({
@@ -143,4 +145,12 @@ export const splitPaneDragFinished = () => ({
 
 export const setHeightPrompt = () => ({
   type: SET_HEIGHT_PROMPT
+});
+
+export const deleteVisualization = () => ({
+  type: DELETE_VISUALIZATION
+});
+
+export const visualizationDeleted = () => ({
+  type: VISUALIZATION_DELETED
 });

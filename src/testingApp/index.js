@@ -26,7 +26,8 @@ const {
     promptForNewFileNameEpic,
     promptForNewHeightEpic,
     promptForRenameEpic,
-    confirmDeleteEpic,
+    confirmFileDeleteEpic,
+    confirmVisualizationDeleteEpic,
     updateTitleEpic,
     updateDescriptionEpic
   }
@@ -46,7 +47,8 @@ epicMiddleware.run(combineEpics(
   promptForNewFileNameEpic,
   promptForNewHeightEpic,
   promptForRenameEpic,
-  confirmDeleteEpic,
+  confirmFileDeleteEpic,
+  confirmVisualizationDeleteEpic,
   updateTitleEpic,
   updateDescriptionEpic
 ));
