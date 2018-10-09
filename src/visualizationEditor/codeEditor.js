@@ -8,6 +8,15 @@ if (process.browser) {
   require('codemirror/mode/htmlmixed/htmlmixed');
   require('codemirror/mode/markdown/markdown');
   require('codemirror/addon/comment/comment');
+  require('codemirror/addon/search/searchcursor.js');
+  require('codemirror/addon/search/search.js');
+  require('codemirror/addon/dialog/dialog.js');
+  require('codemirror/addon/edit/matchbrackets.js');
+  require('codemirror/addon/edit/closebrackets.js');
+  require('codemirror/addon/wrap/hardwrap.js');
+  require('codemirror/addon/fold/foldcode.js');
+  require('codemirror/addon/fold/brace-fold.js');
+  require('codemirror/keymap/sublime.js');
 }
 
 // This component depends on the following CSS:
@@ -58,10 +67,11 @@ export class CodeEditor extends Component {
             theme: 'ubuntu',
             lineNumbers: true,
             lineWrapping: true,
-            extraKeys: {
-              'Cmd-/': 'toggleComment',
-              'Ctrl-/': 'toggleComment'
-            }
+            keyMap: 'sublime',
+            autoCloseBrackets: true,
+            matchBrackets: true,
+            showCursorWhenSelecting: true,
+            tabSize: 2
           }}
           onBeforeChange={(editor, data, value) => {
             onTextChange(value)
