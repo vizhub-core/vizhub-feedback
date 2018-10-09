@@ -9,6 +9,8 @@ import { createEpicMiddleware, combineEpics } from 'redux-observable';
 import { rootReducer } from './rootReducer';
 import { saveSimulationEpic } from './saveSimulationEpic';
 import 'codemirror/lib/codemirror.css';
+import 'codemirror/addon/fold/foldgutter.css';
+import 'codemirror/addon/dialog/dialog.css';
 import '../dist-symlink/styles.css';
 
 const {
