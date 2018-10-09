@@ -27,6 +27,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "codemirror": "^5.39.2",
+    "codemirror-inlet": "^0.1.10",
     "lodash": "^4.17.10",
     "magic-sandbox": "^1.2.0",
     "marked": "^0.4.0",
