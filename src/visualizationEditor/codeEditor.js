@@ -8,6 +8,9 @@ if (process.browser) {
   require('codemirror/mode/htmlmixed/htmlmixed');
   require('codemirror/mode/markdown/markdown');
   require('codemirror/addon/comment/comment');
+
+  // Sublime bindings setup inspired by
+  // https://codemirror.net/demo/sublime.html
   require('codemirror/addon/search/searchcursor.js');
   require('codemirror/addon/search/search.js');
   require('codemirror/addon/dialog/dialog.js');
