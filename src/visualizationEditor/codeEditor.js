@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Inlet from 'codemirror-inlet/index-browserify';
 import { Controlled as CodeMirror } from 'react-codemirror2';
 
 if (process.browser) {
@@ -81,6 +82,7 @@ export class CodeEditor extends Component {
           }}
           editorDidMount={editor => {
             this.value = editor.getValue();
+            Inlet(editor);
           }}
         />
       </div>
