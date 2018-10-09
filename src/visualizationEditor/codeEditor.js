@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Inlet from 'codemirror-inlet/index-browserify';
 import { Controlled as CodeMirror } from 'react-codemirror2';
+
+let Inlet;
 
 if (process.browser) {
   require('codemirror/mode/javascript/javascript');
@@ -21,6 +22,8 @@ if (process.browser) {
   require('codemirror/addon/fold/foldcode.js');
   require('codemirror/addon/fold/brace-fold.js');
   require('codemirror/keymap/sublime.js');
+
+  Inlet = require('codemirror-inlet/index-browserify');
 }
 
 // This component depends on the following CSS:
@@ -82,7 +85,7 @@ export class CodeEditor extends Component {
           }}
           editorDidMount={editor => {
             this.value = editor.getValue();
-            Inlet(editor);
+            Inlet && Inlet(editor);
           }}
         />
       </div>
