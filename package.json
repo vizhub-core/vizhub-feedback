@@ -2,7 +2,7 @@
   "name": "vizhub-ui",
   "version": "1.0.0",
   "description": "A platform for teaching and learning data visualization with D3.js.",
-  "main": "src/exports.js",
+  "main": "dist/index.js",
   "scripts": {
     "build-js": "rollup -c",
     "build-css": "node-sass src/css/index.sass dist/styles.css",
