@@ -28,7 +28,7 @@ export const VisualizationView = props => {
           {title}
         </div>
         <a href={`/${ownerUser.userName}`} >
-          {ownerUser.fullName}
+          {ownerUser.userName}
         </a>
         <div
           className='visualization-view-description'
