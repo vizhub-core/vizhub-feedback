@@ -28,6 +28,7 @@ export const VisualizationView = props => {
           {title}
         </div>
         <a className='test-vis-view-user-name' href={`/${ownerUser.userName}`} >
+          <img style={{borderRadius: '10px', marginBottom: '-5px'}} height="20" width="20" src={ownerUser.avatarUrl} />
           {ownerUser.userName}
         </a>
         <div
