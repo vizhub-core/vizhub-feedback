@@ -1,6 +1,18 @@
 import React from 'react';
 import { VisualizationRunner } from '../visualizationRunner/index.js';
 
+const Avatar = ({avatarUrl}) => (
+  <img
+    style={{
+      borderRadius: '15px',
+      marginBottom: '-10px',
+      marginRight: '5px'
+    }}
+    height='30'
+    width='30'
+    src={avatarUrl+'&s=60'}
+  />
+);
 export const VisualizationView = props => {
   const {
     width,
@@ -28,7 +40,7 @@ export const VisualizationView = props => {
           {title}
         </div>
         <a className='test-vis-view-user-name' href={`/${ownerUser.userName}`} >
-          <img style={{borderRadius: '10px', marginBottom: '-5px'}} height="20" width="20" src={ownerUser.avatarUrl} />
+          <Avatar avatarUrl={ownerUser.avatarUrl}/>
           {ownerUser.userName}
         </a>
         <div
