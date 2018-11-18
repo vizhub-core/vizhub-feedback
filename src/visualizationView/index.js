@@ -37,7 +37,7 @@ export const VisualizationView = props => {
         runId={runId}
       />
       <div className='visualization-view-body'>
-        <a href='/todo-add-link'>
+        <a href='./fullscreen'>
           <MdFullscreen />     
         </a>
         <div className='visualization-view-title'>
