@@ -1,6 +1,19 @@
 import React from 'react';
 import { VisualizationRunner } from '../visualizationRunner/index.js';
+import { MdFullscreen } from 'react-icons/md';
 
+const Avatar = ({avatarUrl}) => (
+  <img
+    style={{
+      borderRadius: '15px',
+      marginBottom: '-10px',
+      marginRight: '5px'
+    }}
+    height='30'
+    width='30'
+    src={avatarUrl+'&s=60'}
+  />
+);
 export const VisualizationView = props => {
   const {
     width,
@@ -10,7 +23,8 @@ export const VisualizationView = props => {
     title,
     description,
     ownerUser,
-    disablePointerEvents
+    disablePointerEvents,
+    fullScreenUrl
   } = props;
 
   const pointerEvents = disablePointerEvents ? 'none' : 'auto';
@@ -24,10 +38,16 @@ export const VisualizationView = props => {
         runId={runId}
       />
       <div className='visualization-view-body'>
-        <div className='visualization-view-title'>
-          {title}
+        <div style={{ display: 'flex' }}>
+          <div className='visualization-view-title' style={{ flexGrow: 1 }}>
+            {title}
+          </div>
+          <a href={fullScreenUrl} title='Fullscreen' target='_blank'>
+            <MdFullscreen />
+          </a>
         </div>
         <a className='test-vis-view-user-name' href={`/${ownerUser.userName}`} >
+          <Avatar avatarUrl={ownerUser.avatarUrl}/>
           {ownerUser.userName}
         </a>
         <div

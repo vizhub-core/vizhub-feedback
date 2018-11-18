@@ -26,7 +26,8 @@ export const IDE = props => {
     onSplitPaneDragStarted,
     onSplitPaneDragFinished,
     splitPaneDragging,
-    onDeleteVisualization
+    onDeleteVisualization,
+    fullScreenUrl
   } = props;
 
   return (
@@ -61,6 +62,7 @@ export const IDE = props => {
           description={visualizationDescription}
           ownerUser={visualizationOwnerUser}
           disablePointerEvents={splitPaneDragging}
+          fullScreenUrl={fullScreenUrl}
         />
       </IDEGrid.Right>
     </IDEGrid>
