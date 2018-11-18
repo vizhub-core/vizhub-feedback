@@ -5,13 +5,12 @@ export const VisualizationFullscreen = props => {
   const { width, height, files } = props;
 
   return (
-    <div className='visualization-fullscreen' >
-      <VisualizationRunner
-        files={files}
-        width={width}
-        height={height}
-        runId='once'
-      />
-    </div>
+    <VisualizationRunner
+      files={files}
+      width={width}
+      height={height}
+      runId='once'
+      measureHeight={true}
+    />
   );
 };

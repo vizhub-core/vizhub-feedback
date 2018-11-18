@@ -1,7 +1,11 @@
-// Shrink and grow to fill available width.
-export const computeScale = (boundsWidth, width) => boundsWidth / width;
+// Shrink and grow to fill available width and height.
+export const computeScale = options => {
+  const { boundsWidth, boundsHeight, width, height } = options;
 
-// Alternative behavior: Shrink if necessary. Do not grow.
-//  boundsWidth > width
-//    ? 1
-//    : boundsWidth / width
+  const aspect = width / height;
+  const boundsAspect = boundsWidth / boundsHeight;
+
+  return aspect > boundsAspect
+    ? boundsWidth / width
+    : boundsHeight / height;
+};
