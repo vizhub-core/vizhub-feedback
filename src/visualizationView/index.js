@@ -23,7 +23,8 @@ export const VisualizationView = props => {
     title,
     description,
     ownerUser,
-    disablePointerEvents
+    disablePointerEvents,
+    fullScreenUrl
   } = props;
 
   const pointerEvents = disablePointerEvents ? 'none' : 'auto';
@@ -37,7 +38,7 @@ export const VisualizationView = props => {
         runId={runId}
       />
       <div className='visualization-view-body'>
-        <a href='./fullscreen'>
+        <a href={fullScreenUrl}>
           <MdFullscreen />     
         </a>
         <div className='visualization-view-title'>
