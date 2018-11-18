@@ -22,7 +22,11 @@ export class VisualizationRunner extends Component {
       <Measure bounds onResize={this.onResize} >
         {({ measureRef }) =>
           <div ref={measureRef} style={measureHeight ? { height: '100%' } : {}} >
-            <div style={{height: `${height * scale}px`}} >
+            <div style={{
+              width: `${width * scale}px`,
+              height: `${height * scale}px`,
+              margin: '0 auto'
+            }}>
               <RunnerIFrame
                 width={width}
                 height={height}
