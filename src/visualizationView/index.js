@@ -1,5 +1,6 @@
 import React from 'react';
 import { VisualizationRunner } from '../visualizationRunner/index.js';
+import { MdFullscreen } from 'react-icons/md';
 
 const Avatar = ({avatarUrl}) => (
   <img
@@ -36,6 +37,9 @@ export const VisualizationView = props => {
         runId={runId}
       />
       <div className='visualization-view-body'>
+        <a href='/todo-add-link'>
+          <MdFullscreen />     
+        </a>
         <div className='visualization-view-title'>
           {title}
         </div>
