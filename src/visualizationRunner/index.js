@@ -18,7 +18,19 @@ export class VisualizationRunner extends Component {
     const boundsHeight = measureHeight ? this.state.bounds.height : Infinity;
     const scale = computeScale({ boundsWidth, boundsHeight, width, height });
     const srcDoc = this.getSrcDoc(files, runId);
-    const measureStyle = measureHeight ? { height: '100%' } : {};
+
+    // These properties are for vertical centering in fullscreen mode.
+    const measureStyle = {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
+
+    // Required for correct resize in fullscreen mode.
+    // Breaks the visualization editor view if enabled there.
+    if (measureHeight) {
+      measureStyle.height = '100%';
+    }
 
     return (
       <Measure bounds onResize={this.onResize} >
