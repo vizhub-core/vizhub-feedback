@@ -4,7 +4,7 @@ This repository contains the core user interface components for [vizhub.com](htt
 
 This is a submodule of https://github.com/datavis-tech/vizhub .
 
-It also has our [public backlog](https://github.com/datavis-tech/vizhub-ui/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc), prioritized by number of :thumbsup: reactions, and [Scrum Board](https://github.com/datavis-tech/vizhub-ui/projects/1).
+See also our [VizHub Scrum Board](https://github.com/orgs/datavis-tech/projects/1).
 
  * If you want a certain feature, please give its corresponding GitHub issue a :thumbsup:
  * If you discover bugs or have ideas for new features, please [open an issue](https://github.com/datavis-tech/vizhub-ui/issues/new?template=upvotable.md).
