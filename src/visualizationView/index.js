@@ -1,19 +1,8 @@
 import React from 'react';
 import { VisualizationRunner } from '../visualizationRunner/index.js';
 import { MdFullscreen } from 'react-icons/md';
+import { Avatar } from '../atoms/avatar';
 
-const Avatar = ({avatarUrl}) => (
-  <img
-    style={{
-      borderRadius: '15px',
-      marginBottom: '-10px',
-      marginRight: '5px'
-    }}
-    height='30'
-    width='30'
-    src={avatarUrl+'&s=60'}
-  />
-);
 export const VisualizationView = props => {
   const {
     width,
