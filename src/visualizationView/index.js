@@ -32,7 +32,7 @@ export const VisualizationView = props => {
             {title}
           </div>
           <a href={fullScreenUrl} title='Fullscreen' target='_blank'>
-            <MdFullscreen />
+            <MdFullscreen size={30}/>
           </a>
         </div>
         <a className='test-vis-view-user-name' href={`/${ownerUser.userName}`} >
