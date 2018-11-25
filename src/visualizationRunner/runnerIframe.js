@@ -15,6 +15,7 @@ export class RunnerIFrame extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.runId !== this.props.runId) {
+      console.clear();
       this.setSrcDoc();
     }
   }
