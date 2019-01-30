@@ -6,6 +6,7 @@ let Inlet;
 if (process.browser) {
   require('codemirror/mode/javascript/javascript');
   require('codemirror/mode/xml/xml');
+  require('codemirror/mode/jsx/jsx');
   require('codemirror/mode/css/css');
   require('codemirror/mode/htmlmixed/htmlmixed');
   require('codemirror/mode/markdown/markdown');
@@ -33,7 +34,7 @@ if (process.browser) {
 const modes = {
   '.html': 'htmlmixed',
   '.css': 'css',
-  '.js': 'javascript',
+  '.js': 'jsx',
   '.md': 'markdown'
 };
 const extension = fileName => fileName.substr(fileName.lastIndexOf('.'));
