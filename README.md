@@ -1,7 +1,7 @@
-# DEPRECATED
+# VizHub Issue Tracker
 
-This repository once housed the UI components for VizHub.
+Welcome to the VizHub community issue tracker!
 
-The content that was here has been migrated into the main VizHub repository at https://github.com/datavis-tech/vizhub
+Check out our [live VizHub Kanban board](https://github.com/orgs/datavis-tech/projects/2) showing planned features.
 
-This repository is sticking around for now so we can keep track of its GitHub Issues.
+Feel free to weigh in by creating a new issue here or commenting on an existing one.
