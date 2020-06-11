@@ -2,6 +2,6 @@
 
 Welcome to the VizHub community issue tracker!
 
-Check out our [live VizHub Kanban board](https://github.com/datavis-tech/vizhub-issue-tracker/projects/2) showing planned features.
+Feel free to [create an issue](https://github.com/datavis-tech/vizhub-issue-tracker/issues/new) for any and all VizHub feedback.
 
-Feel free to weigh in by creating a new issue here or commenting on an existing one!
+Check out our [Kanban board](https://github.com/datavis-tech/vizhub-issue-tracker/projects/2).
